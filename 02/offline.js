@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1718224848,
+	"version": 1718325467,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -11,11 +11,16 @@
 		"images/bombon_verde-sheet0.png",
 		"images/cinta-sheet0.png",
 		"images/spawn-sheet0.png",
+		"images/bluetarget-sheet0.png",
+		"images/sprite-sheet0.png",
+		"images/bluemark-sheet0.png",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
 		"icon-128.png",
 		"icon-256.png",
-		"loading-logo.png"
+		"loading-logo.png",
+		"nunito-bold.woff",
+		"stylesheet.css"
 	]
 }
