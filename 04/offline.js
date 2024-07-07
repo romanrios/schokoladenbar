@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1720389330,
+	"version": 1720390738,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -34,6 +34,12 @@
 		"images/button_back-sheet0.png",
 		"images/button_fullscreen-sheet0.png",
 		"images/sprite3-sheet0.png",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png",
 		"nunito-bold.ttf",
 		"nunito-bold.woff",
 		"nunito-bold.woff2",
