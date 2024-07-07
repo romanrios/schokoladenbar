@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1720288487,
+	"version": 1720386242,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -23,6 +23,19 @@
 		"images/cinta_engranaje-sheet0.png",
 		"images/cinta_line_tiled.png",
 		"images/bombon_amarillo-sheet0.png",
-		"images/bombon_containers-sheet0.png"
+		"images/bombon_containers-sheet0.png",
+		"images/coin-sheet0.png",
+		"images/clock-sheet0.png",
+		"images/title_button-sheet0.png",
+		"images/title_title-sheet0.png",
+		"images/smallarrow-sheet0.png",
+		"images/textcontainer_bomboncounter-sheet0.png",
+		"images/sprite2-sheet0.png",
+		"images/button_back-sheet0.png",
+		"images/button_fullscreen-sheet0.png",
+		"images/sprite3-sheet0.png",
+		"nunito-bold.woff",
+		"nunito-bold.woff2",
+		"stylesheet.css"
 	]
 }
