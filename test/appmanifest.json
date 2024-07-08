@@ -1,9 +1,9 @@
 ﻿{
-	"name": "Nur Schokoladen",
-	"short_name": "Nur Schokoladen",
+	"name": "Web Fonts Preload Fix",
+	"short_name": "Web Fonts Preload Fix",
 	"start_url": "index.html",
 	"display": "fullscreen",
-	"orientation": "landscape",
+	"orientation": "any",
 	"icons": [{
 		"src": "icon-16.png",
 		"sizes": "16x16",
