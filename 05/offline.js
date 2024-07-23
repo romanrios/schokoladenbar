@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1721625558,
+	"version": 1721734146,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -41,6 +41,10 @@
 		"images/background-sheet0.png",
 		"images/characterphotoroom-sheet0.png",
 		"images/camera-sheet0.png",
+		"media/item.m4a",
+		"media/item.ogg",
+		"media/jazzy-baby-217433.m4a",
+		"media/jazzy-baby-217433.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
