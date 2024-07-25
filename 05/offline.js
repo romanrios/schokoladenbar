@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1721881339,
+	"version": 1721907461,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -39,10 +39,11 @@
 		"images/bluetarget-sheet0.png",
 		"images/destroy-sheet0.png",
 		"images/spawn-sheet0.png",
-		"images/background-sheet0.png",
 		"images/characterphotoroom-sheet0.png",
+		"images/title_background-sheet0.png",
 		"images/camera-sheet0.png",
 		"images/9patch.png",
+		"images/x_red-sheet0.png",
 		"media/item.m4a",
 		"media/item.ogg",
 		"media/level-complete-mobile-game-app-locran-1-00-06.m4a",
