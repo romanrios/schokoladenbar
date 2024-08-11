@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1723252040,
+	"version": 1723337218,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -30,11 +30,9 @@
 		"images/button_bg-sheet0.png",
 		"images/title_button-sheet0.png",
 		"images/title_title-sheet0.png",
-		"images/textcontainer_bomboncounter-sheet0.png",
 		"images/9patch.png",
 		"images/level_background-sheet0.png",
 		"images/cinta_engranaje-sheet0.png",
-		"images/cinta_r-sheet0.png",
 		"images/cinta_l-sheet0.png",
 		"images/cinta2-sheet0.png",
 		"images/bombon_containers-sheet0.png",
@@ -52,6 +50,7 @@
 		"images/sprite2-sheet0.png",
 		"images/score_bg-sheet0.png",
 		"images/coin_plain-sheet0.png",
+		"images/three_stars-sheet0.png",
 		"media/item.m4a",
 		"media/item.ogg",
 		"media/level-complete-mobile-game-app-locran-1-00-06.m4a",
