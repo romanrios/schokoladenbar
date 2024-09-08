@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Zoom(unused)</name>
+    <events>
+        <variable constant="1" name="ZOOM_MIN_SCALE" sid="873045709810002" static="0" type="number">0.95</variable>
+        <variable constant="1" name="ZOOM_MAX_SCALE" sid="183835628278419" static="0" type="number">1.1</variable>
+        <event-group description="" disabled="1" sid="294638830347132" title="Zoom">
+            <sub-events>
+                <event-block disabled="1" sid="882195259365387">
+                    <conditions>
+                        <condition id="0" name="On function" sid="909080359221748" type="Function">
+                            <param id="0" name="Name">&quot;zoomIn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Set layer scale" sid="901343246858918" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">lerp(LayerScale(&quot;background&quot;), ZOOM_MIN_SCALE, 4*dt)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="746180497205455" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">lerp(LayerScale(&quot;background&quot;), ZOOM_MIN_SCALE, 4*dt)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="852144036539549" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Scale">lerp(LayerScale(&quot;background&quot;), ZOOM_MIN_SCALE, 4*dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="369422666813958">
+                    <conditions>
+                        <condition id="0" name="On function" sid="705388528516055" type="Function">
+                            <param id="0" name="Name">&quot;zoomOut&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Set layer scale" sid="149893851667807" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">lerp(LayerScale(&quot;background&quot;), ZOOM_MAX_SCALE, 0.1*dt)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="317593347725432" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">lerp(LayerScale(&quot;background&quot;), ZOOM_MAX_SCALE, 0.1*dt)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="804074151474085" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Scale">lerp(LayerScale(&quot;background&quot;), ZOOM_MAX_SCALE, 0.1*dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" disabled="1" sid="873226018920218">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="351046474660301" type="bombon_azul" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="786587699609255" type="BlueMark">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="631774184151556" type="Function">
+                            <param id="0" name="Name">&quot;zoomIn&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="396350823416655">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="651356443057018" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="607027600636367" type="BlueMark">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="577645679019736" type="Function">
+                            <param id="0" name="Name">&quot;zoomOut&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" disabled="1" sid="321038459140142">
+                    <conditions>
+                        <condition behavior="DragDrop2" id="0" name="Is dragging" sid="639711490204145" type="BombonDefectuoso" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="791282580350575" type="DefectuosoMark">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="448921122481313" type="Function">
+                            <param id="0" name="Name">&quot;zoomIn&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="228501495380959">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="396501142463115" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="797398882766462" type="DefectuosoMark">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="480084876401041" type="Function">
+                            <param id="0" name="Name">&quot;zoomOut&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

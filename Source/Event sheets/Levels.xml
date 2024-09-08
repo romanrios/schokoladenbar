@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Levels</name>
+    <events>
+        <variable constant="0" name="currentLevel" sid="105026023243152" static="0" type="number">1</variable>
+        <include>Main</include>
+        <include>LevelMain</include>
+        <event-block sid="157483741894669">
+            <conditions>
+                <condition id="0" name="On function" sid="714570307515273" type="Function">
+                    <param id="0" name="Name">&quot;setTimerText&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="100192466442445" type="timerText">
+                    <param id="0" name="Text">floor(timer/60%60)&amp;&quot;:&quot;&amp;zeropad((floor(timer%60)),2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Common events</comment>
+        <event-block sid="748391302365892">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="354278552561353" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="239363608310094" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">currentLevel*5+55</param>
+                </action>
+                <action id="0" name="Call function" sid="141681815043596" type="Function">
+                    <param id="0" name="Name">&quot;setTimerText&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="517980288430898" type="System">
+                    <param id="0" name="Variable">cintaSpeed</param>
+                    <param id="1" name="Value">(currentLevel-1)/20+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Levels</comment>
+        <event-block sid="840253354050954">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="232809798970302" type="System">
+                    <param id="0" name="Variable">currentLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="958773056880331">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="573105145894635" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="531420416510352" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="267719242892261" type="System">
+                            <param id="0" name="Variable">bombonFreqMax</param>
+                            <param id="1" name="Value">2.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="601494427312217">
+                    <conditions>
+                        <condition id="0" name="On function" sid="713779867522441" type="Function">
+                            <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="406366626173206" type="System">
+                            <param id="0" name="Variable">bombonRandom</param>
+                            <param id="1" name="Value">choose(1,1,2,2,3,3,4,5,6,7,8,9)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="809392385189750">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="682896939013798" type="System">
+                    <param id="0" name="Variable">currentLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="506631342904201">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="138931636799094" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="472941353344241" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="906105674095578" type="System">
+                            <param id="0" name="Variable">bombonFreqMax</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="805896369016984">
+                    <conditions>
+                        <condition id="0" name="On function" sid="823255492003353" type="Function">
+                            <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="755182447270712" type="System">
+                            <param id="0" name="Variable">bombonRandom</param>
+                            <param id="1" name="Value">choose(1,1,2,2,3,4,5,6,7,8,9)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="914725676660871">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="201333133994373" type="System">
+                    <param id="0" name="Variable">currentLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="875714194566648">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="920588227337249" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="372126743438871" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="897133829720099" type="System">
+                            <param id="0" name="Variable">bombonFreqMax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="792077074315358">
+                    <conditions>
+                        <condition id="0" name="On function" sid="878471041403932" type="Function">
+                            <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="724114150172558" type="System">
+                            <param id="0" name="Variable">bombonRandom</param>
+                            <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="648643279592331">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="173876397587896" type="System">
+                    <param id="0" name="Variable">currentLevel</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="823426403794146">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="894004150228162" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="172948283566034" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="567403023989215" type="System">
+                            <param id="0" name="Variable">bombonFreqMax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="101182432104812">
+                    <conditions>
+                        <condition id="0" name="On function" sid="242334066418832" type="Function">
+                            <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="496452808146815" type="System">
+                            <param id="0" name="Variable">bombonRandom</param>
+                            <param id="1" name="Value">choose(1,1,1,2,2,2,3,3,3,4,4,4,5,6,7,8,9,10,11)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

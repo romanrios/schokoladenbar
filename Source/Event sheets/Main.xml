@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main</name>
+    <events>
+        <comment>Font</comment>
+        <variable constant="0" name="googleFont" sid="373220329968732" static="0" type="text">https://fonts.googleapis.com/css2?family=Nunito</variable>
+        <event-block sid="844777755603737">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="162070050256908" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="168478582918792" type="Texts">
+                    <param id="0" name="Family name">&quot;Nunito&quot;</param>
+                    <param id="1" name="CSS URL">googleFont</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Fullscreen</comment>
+        <event-block sid="855165382725985">
+            <conditions>
+                <condition id="17" name="On tap object" sid="966089025327049" type="Touch">
+                    <param id="0" name="Object">button_fullscreen</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="568763539807422">
+                    <conditions>
+                        <condition id="10" inverted="1" name="Is fullscreen" sid="151246311700627" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="750484027913642" type="Browser">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="218444752481713">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="775882335894060" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Cancel fullscreen" sid="294695218730270" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="642487600560575">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="984190585903806" type="Mouse">
+                    <param id="0" name="Object">button_fullscreen</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="820884001493688" type="button_fullscreen">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="482675602312579">
+            <conditions>
+                <condition id="-22" name="Else" sid="880134907899480" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="244100729876381" type="button_fullscreen">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Cursor Hover</comment>
+        <event-block sid="467729956293601">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="319649644556168" type="Mouse">
+                    <param id="0" name="Object">ButtonsHover</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="930704571824791" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="135962021169958">
+            <conditions>
+                <condition id="-22" name="Else" sid="385291834658829" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="183981106291300" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Button Sound</comment>
+        <event-block sid="671370605026239">
+            <conditions>
+                <condition id="17" name="On tap object" sid="878833008110864" type="Touch">
+                    <param id="0" name="Object">ButtonSound</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="404751542147661" type="Audio">
+                    <param id="0" name="Audio file">system-notification-199277</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">volumeSfx-3</param>
+                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
