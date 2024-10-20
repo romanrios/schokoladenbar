@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1729392794,
+	"version": 1729435096,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -87,6 +87,7 @@
 		"images/sprite5-sheet0.png",
 		"images/shadow-sheet0.png",
 		"images/dino-sheet0.png",
+		"images/sprite6-sheet0.png",
 		"media/item.m4a",
 		"media/item.ogg",
 		"media/level-complete-mobile-game-app-locran-1-00-06.m4a",

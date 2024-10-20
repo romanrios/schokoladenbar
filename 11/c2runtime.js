@@ -26862,11 +26862,11 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.LocalStorage,
 	cr.plugins_.Mouse,
 	cr.plugins_.Particles,
+	cr.plugins_.Touch,
+	cr.plugins_.Sprite,
 	cr.plugins_.Text,
 	cr.plugins_.sliderbar,
-	cr.plugins_.Sprite,
 	cr.plugins_.TiledBg,
-	cr.plugins_.Touch,
 	cr.behaviors.Anchor,
 	cr.behaviors.Sin,
 	cr.behaviors.Flash,
@@ -26953,6 +26953,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.acts.SetLayerOpacity,
 	cr.system_object.prototype.exps.layeropacity,
 	cr.plugins_.Text.prototype.acts.SetY,
+	cr.plugins_.Sprite.prototype.acts.SetPos,
 	cr.behaviors.Sin.prototype.acts.SetActive,
 	cr.plugins_.LocalStorage.prototype.acts.ClearStorage,
 	cr.system_object.prototype.acts.ResetGlobals,
@@ -26987,6 +26988,8 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Browser.prototype.acts.CancelFullScreen,
 	cr.plugins_.Mouse.prototype.cnds.IsOverObject,
 	cr.plugins_.Mouse.prototype.acts.SetCursor,
-	cr.system_object.prototype.cnds.PickNth
+	cr.plugins_.Sprite.prototype.acts.SetAngle,
+	cr.system_object.prototype.cnds.PickNth,
+	cr.behaviors.lunarray_LiteTween.prototype.cnds.CompareProgress,
+	cr.plugins_.Sprite.prototype.acts.MoveToTop
 ];};
-
