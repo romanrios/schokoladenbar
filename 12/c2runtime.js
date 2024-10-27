@@ -26857,16 +26857,16 @@ cr.behaviors.scrollto = function(runtime)
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.NinePatch,
 	cr.plugins_.Audio,
-	cr.plugins_.Function,
 	cr.plugins_.Browser,
-	cr.plugins_.Particles,
+	cr.plugins_.Function,
 	cr.plugins_.LocalStorage,
+	cr.plugins_.Particles,
 	cr.plugins_.Mouse,
-	cr.plugins_.TiledBg,
+	cr.plugins_.Sprite,
 	cr.plugins_.sliderbar,
 	cr.plugins_.Touch,
+	cr.plugins_.TiledBg,
 	cr.plugins_.Text,
-	cr.plugins_.Sprite,
 	cr.behaviors.Anchor,
 	cr.behaviors.Sin,
 	cr.behaviors.Flash,
@@ -26995,5 +26995,10 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.cnds.IsAnimPlaying,
 	cr.behaviors.lunarray_LiteTween.prototype.cnds.CompareProgress,
 	cr.plugins_.Sprite.prototype.cnds.IsBetweenAngles,
-	cr.plugins_.Sprite.prototype.acts.SetInstanceVar
+	cr.plugins_.Sprite.prototype.acts.SetInstanceVar,
+	cr.system_object.prototype.cnds.ForEach,
+	cr.system_object.prototype.exps.str,
+	cr.plugins_.Sprite.prototype.acts.SetY,
+	cr.plugins_.Sprite.prototype.cnds.PickByUID,
+	cr.system_object.prototype.exps["int"]
 ];};
