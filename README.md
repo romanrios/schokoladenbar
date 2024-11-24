@@ -18,4 +18,8 @@ romanrios@live.com
 | Test 08        | [Link](https://romanrios.github.io/schokoladenbar/08) |
 | Test 09        | [Link](https://romanrios.github.io/schokoladenbar/09) |
 | Test 10        | [Link](https://romanrios.github.io/schokoladenbar/10) |
+| Test 11        | [Link](https://romanrios.github.io/schokoladenbar/11) |
+| Test 12        | [Link](https://romanrios.github.io/schokoladenbar/12) |
+| Test 13        | [Link](https://romanrios.github.io/schokoladenbar/13) |
+| Test 14        | [Link](https://romanrios.github.io/schokoladenbar/14) |
 | Actual Version | [Link](https://romanrios.github.io/schokoladenbar/00) |
