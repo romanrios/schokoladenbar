@@ -3,7 +3,14 @@
 Original Idea: Ángela María Vasile
 
 Design and Development: Román Ríos
-romanrios.github.io
+
+
+
+<img src="https://github.com/user-attachments/assets/0a25d806-b8ac-47e3-95ec-8b67d3df2ffa" alt="roman_rios" width="300">
+
+
+[romanrios.github.io](https://romanrios.github.io)
+
 romanrios@live.com
 
 | Description    | GitHub Pages                                          |
@@ -22,4 +29,5 @@ romanrios@live.com
 | Test 12        | [Link](https://romanrios.github.io/schokoladenbar/12) |
 | Test 13        | [Link](https://romanrios.github.io/schokoladenbar/13) |
 | Test 14        | [Link](https://romanrios.github.io/schokoladenbar/14) |
-| Actual Version | [Link](https://romanrios.github.io/schokoladenbar/00) |
+| Test 15        | [Link](https://romanrios.github.io/schokoladenbar/15) |
+| Actual Version | [Link](https://romanrios.github.io/schokoladenbar/15) |
