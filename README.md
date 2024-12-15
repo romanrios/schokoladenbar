@@ -32,5 +32,5 @@ romanrios@live.com
 | Test 15        | [Link](https://romanrios.github.io/schokoladenbar/15) |
 | Test 16        | [Link](https://romanrios.github.io/schokoladenbar/16) |
 | Test 17        | [Link](https://romanrios.github.io/schokoladenbar/17) |
-| Test 17        | [Link](https://romanrios.github.io/schokoladenbar/18) |
+| Test 18        | [Link](https://romanrios.github.io/schokoladenbar/18) |
 | Actual Version | [Link](https://romanrios.github.io/schokoladenbar/00) |
