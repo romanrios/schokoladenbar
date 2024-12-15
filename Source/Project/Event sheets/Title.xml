@@ -119,17 +119,39 @@
                 <event-block sid="335620985506066">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="162345663664011" type="System" />
-                        <condition id="-14" name="Compare variable" sid="934386599338201" type="System">
-                            <param id="0" name="Variable">titleCameraPosition</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;levels&quot;</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="188455009281961" type="Camera">
-                            <param id="0" name="X">1920</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="595710967744677">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="934386599338201" type="System">
+                                    <param id="0" name="Variable">titleCameraPosition</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;levelA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="188455009281961" type="Camera">
+                                    <param id="0" name="X">1920+400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="537006299241427">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="237999348841096" type="System">
+                                    <param id="0" name="Variable">titleCameraPosition</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;levelB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="386282929134191" type="Camera">
+                                    <param id="0" name="X">1920+400</param>
+                                    <param id="1" name="Y">1080</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Jugar</comment>
                 <event-block sid="798505692357499">
@@ -145,19 +167,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="310764242772933" type="Camera">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">1920</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="199990473024756" type="Camera">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">360</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="506349508924200" type="Camera">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
+                        <action id="0" name="Call function" sid="773040411337397" type="Function">
+                            <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                            <param id="1" name="Parameter {n}">1920+400{###}360</param>
                         </action>
                     </actions>
                 </event-block>
@@ -175,19 +187,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="354009114155090" type="Camera">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">-640</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="251148566990869" type="Camera">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">360</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="459871011883354" type="Camera">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
+                        <action id="0" name="Call function" sid="976435314845951" type="Function">
+                            <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                            <param id="1" name="Parameter {n}">-640{###}360</param>
                         </action>
                     </actions>
                 </event-block>
@@ -205,19 +207,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="256079151887694" type="Camera">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">640</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="452505312883287" type="Camera">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">1080</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="588934956138534" type="Camera">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
+                        <action id="0" name="Call function" sid="291850190988418" type="Function">
+                            <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                            <param id="1" name="Parameter {n}">640{###}1080</param>
                         </action>
                     </actions>
                 </event-block>
@@ -228,352 +220,108 @@
                             <param id="0" name="Object">button_back</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="514034432548394" type="Camera">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">640</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="684021336634011" type="Camera">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">360</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="941894731225089" type="Camera">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <variable constant="0" name="levelUnlocked" sid="119735757572878" static="0" type="number">1</variable>
-        <event-group description="" sid="142629356392536" title="Title Level Routing &amp; Unlock">
-            <sub-events>
-                <event-block sid="931464113272217">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="727316183424230" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="957992945197013" type="Function">
-                            <param id="0" name="Name">&quot;setUnlockedLevelsOpacity&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="572881617573957">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="950030285233901" type="Touch">
-                            <param id="0" name="Object">button_bg</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="648987982562661" type="button_bg">
-                            <param id="0" name="Instance variable">level</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">levelUnlocked</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="912737741247418" type="System">
-                            <param id="0" name="Variable">currentLevel</param>
-                            <param id="1" name="Value">button_bg.level</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block any="1" sid="533699074061081">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="448805058839442" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="357828653049985" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="150067561655035" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">7</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="951947023030972" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">10</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="322580383639621" type="System">
-                                    <param id="0" name="Layout">Supervisora</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="181972627026960">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="599961945030891" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="407025644959862" type="System">
-                                    <param id="0" name="Layout">Level</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>TESTING - DESBLOQUEAR TODOS</comment>
-                <event-block sid="241173222756982">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="722197702478478" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="862496206419600" type="System">
-                            <param id="0" name="Seconds">0.5</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="203407058519475">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="860944915476839" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">levelUnlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="292476219843647" type="button_bg">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="951281015358242">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="398817930436215" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">levelUnlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="512687207723607" type="button_bg">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block bookmark="1" sid="414839892744937">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="167311883704436" type="Touch">
-                            <param id="0" name="Object">title_button</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="861070874546822" type="System">
-                            <param id="0" name="Object">title_button</param>
-                            <param id="1" name="Expression">title_button.UID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">171</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="662817724667648" type="System">
-                            <param id="0" name="Variable">levelUnlocked</param>
-                            <param id="1" name="Value">12</param>
-                        </action>
-                        <action id="0" name="Set item" sid="998040789397699" type="LocalStorage">
-                            <param id="0" name="Key">&quot;levelUnlocked&quot;</param>
-                            <param id="1" name="Value">levelUnlocked</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="793912912029792" type="button_bg">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="891948070460905">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="170869153635222" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">levelUnlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="874808277644046" type="button_bg">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="200457351357448">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="866532802470919" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">levelUnlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="554292085209370" type="button_bg">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block bookmark="1" sid="105481320727601">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="870871186738590" type="Touch">
-                            <param id="0" name="Object">title_button</param>
-                        </condition>
-                        <condition id="-33" name="Pick by comparison" sid="376465260448214" type="System">
-                            <param id="0" name="Object">title_button</param>
-                            <param id="1" name="Expression">title_button.UID</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">173</param>
-                        </condition>
-                        <condition disabled="1" id="-33" name="Pick by comparison" sid="839327818011714" type="System">
-                            <param id="0" name="Object">button_bg</param>
-                            <param id="1" name="Expression">button_bg.level</param>
-                            <param id="2" name="Comparison">1</param>
-                            <param id="3" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="792415045417875" type="System">
-                            <param id="0" name="Variable">levelUnlocked</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set item" sid="404850313558377" type="LocalStorage">
-                            <param id="0" name="Key">&quot;levelUnlocked&quot;</param>
-                            <param id="1" name="Value">levelUnlocked</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="927781485250032" type="button_bg">
-                            <param id="0" name="Opacity">30</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="150271389153362">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="315292498587937" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">levelUnlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Set opacity" sid="638367051638048" type="button_bg">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="725058012371889" type="button_bg">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="186964108653750">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="416304413389873" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">levelUnlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="368342839595948" type="button_bg">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="945556930398251">
-                    <conditions>
-                        <condition id="0" name="On function" sid="698812603045384" type="Function">
-                            <param id="0" name="Name">&quot;setUnlockedLevelsOpacity&quot;</param>
-                        </condition>
-                    </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="557643283926675">
+                        <event-block sid="780574452720832">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="435348606340378" type="button_bg">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">levelUnlocked</param>
+                                <condition id="-1" name="Compare X" sid="107602759802448" type="Camera">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">3999</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="242706574374716" type="button_bg">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="0" name="Call function" sid="127343732363714" type="Function">
+                                    <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                                    <param id="1" name="Parameter {n}">640{###}360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="630555593709992">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="503534649019250" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="843907334151162" type="Function">
+                                    <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                                    <param id="1" name="Parameter {n}">1920+400{###}360</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="342122439393432">
+                <comment>lineaA lineaB</comment>
+                <event-block sid="915197890959137">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="892036691936880" type="Touch">
+                        <condition id="17" name="On tap object" sid="425839505631816" type="Touch">
                             <param id="0" name="Object">title_button</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="655169126304885" type="title_button">
+                        <condition id="-7" name="Compare instance variable" sid="122128422314878" type="title_button">
                             <param id="0" name="Instance variable">id</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;title_restablecer_si&quot;</param>
+                            <param id="2" name="Value">&quot;lineaB&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="3" name="Clear storage" sid="759671230625536" type="LocalStorage" />
-                        <action id="-21" name="Reset global variables" sid="576735676506722" type="System" />
-                        <action id="-26" name="Restart layout" sid="543987413754504" type="System" />
-                    </actions>
-                </event-block>
-                <event-block sid="405768760260856">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="223963683359091" type="Touch">
-                            <param id="0" name="Object">title_button</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="449586481486562" type="title_button">
-                            <param id="0" name="Instance variable">id</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;title_restablecer&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="454389247939432" type="Camera">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">-640</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="967190230547645" type="Camera">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">1080</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="823492988987830" type="Camera">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
+                        <action id="0" name="Call function" sid="150164497702730" type="Function">
+                            <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                            <param id="1" name="Parameter {n}">1920+400{###}1080</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="974268664051424">
+                <event-block sid="128254558033523">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="163386661914667" type="Touch">
+                        <condition id="17" name="On tap object" sid="519079741182662" type="Touch">
                             <param id="0" name="Object">title_button</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="673238018897974" type="title_button">
+                        <condition id="-7" name="Compare instance variable" sid="629905511003186" type="title_button">
                             <param id="0" name="Instance variable">id</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;title_restablecer_no&quot;</param>
+                            <param id="2" name="Value">&quot;lineaA&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="759999443026613" type="Camera">
+                        <action id="0" name="Call function" sid="783637888687126" type="Function">
+                            <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                            <param id="1" name="Parameter {n}">1920+400{###}360</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Notepad</comment>
+                <event-block sid="180617515040892">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="700939662353962" type="Touch">
+                            <param id="0" name="Object">notepad</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="557977237919386" type="Camera">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">1000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="525502555504067" type="Function">
+                            <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                            <param id="1" name="Parameter {n}">4000{###}360</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="517216638053112">
+                    <conditions>
+                        <condition id="0" name="On function" sid="163453995552738" type="Function">
+                            <param id="0" name="Name">&quot;moveCamera&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="680162895167707" type="Camera">
                             <param id="0" name="Target is">0</param>
                             <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">-640</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
                         </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="697379262880779" type="Camera">
+                        <action behavior="LiteTween" id="3" name="Set target" sid="101287116467051" type="Camera">
                             <param id="0" name="Target is">1</param>
                             <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">360</param>
+                            <param id="2" name="Value">Function.Param(1)</param>
                         </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="949295185918812" type="Camera">
+                        <action behavior="LiteTween" id="10" name="Start" sid="391639743142021" type="Camera">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
@@ -596,7 +344,7 @@
                         <action id="-16" name="Wait" sid="323146935005589" type="System">
                             <param id="0" name="Seconds">0.01</param>
                         </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="200071367163127" type="UI_bombones">
+                        <action behavior="Sine2" id="0" name="Set active" sid="372740835952480" type="BombonFlotante">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -606,7 +354,7 @@
                         <condition id="-3" name="On end of layout" sid="704134928469974" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Sine" id="0" name="Set active" sid="122034318158667" type="UI_bombones">
+                        <action behavior="Sine2" id="0" name="Set active" sid="194875623338238" type="BombonFlotante">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -618,10 +366,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="483269564672414" type="System">
-                            <param id="0" name="Variable">bombonFlotante</param>
-                            <param id="1" name="Value">choose(1,2,3,4,5)</param>
-                        </action>
                         <action id="-9" name="Set value" sid="764256936325506" type="System">
                             <param id="0" name="Variable">bombonFlotanteX</param>
                             <param id="1" name="Value">Function.Param(0)</param>
@@ -632,6 +376,36 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="971257764928553">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="757588767178718" type="Function">
+                                    <param id="0" name="Index">2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;color&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="483269564672414" type="System">
+                                    <param id="0" name="Variable">bombonFlotante</param>
+                                    <param id="1" name="Value">choose(1,2,3,4)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="385834399720122">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="329469472664358" type="Function">
+                                    <param id="0" name="Index">2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;dino&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="705890628519441" type="System">
+                                    <param id="0" name="Variable">bombonFlotante</param>
+                                    <param id="1" name="Value">choose(1,2,3,4,5,6)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="726934616265051">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="456008006876054" type="System">
@@ -715,26 +489,54 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="391781378508482">
+                        <event-block sid="709990827369051">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="631372645324963" type="System">
+                                <condition id="-14" name="Compare variable" sid="627020042399655" type="System">
                                     <param id="0" name="Variable">bombonFlotante</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="384446941426947" type="System">
-                                    <param id="0" name="Object to create">UI_bombon_chocolate</param>
+                                <action id="-3" name="Create object" sid="986942578890702" type="System">
+                                    <param id="0" name="Object to create">UI_bombon_azul_brillo</param>
                                     <param id="1" name="Layer">&quot;BombonesFlotantes&quot;</param>
                                     <param id="2" name="X">bombonFlotanteX</param>
                                     <param id="3" name="Y">bombonFlotanteY</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="557801448483828" type="UI_bombon_chocolate">
+                                <action id="9" name="Set scale" sid="488796454293279" type="UI_bombon_azul_brillo">
                                     <param id="0" name="Scale">random(scaleMin,scaleMax)</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="893136933802694" type="UI_bombon_chocolate">
+                                <action id="-16" name="Set opacity" sid="767451568151727" type="UI_bombon_azul_brillo">
                                     <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="391781378508482">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="631372645324963" type="System">
+                                    <param id="0" name="Variable">bombonFlotante</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="384446941426947" type="System">
+                                    <param id="0" name="Object to create">dino</param>
+                                    <param id="1" name="Layer">&quot;BombonesFlotantes&quot;</param>
+                                    <param id="2" name="X">bombonFlotanteX</param>
+                                    <param id="3" name="Y">bombonFlotanteY</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="557801448483828" type="dino">
+                                    <param id="0" name="Scale">random(scaleMin,scaleMax)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="629683692132430" type="dino">
+                                    <param id="0" name="Animation">choose(&quot;Default&quot;,&quot;DefaultAlternate&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="961635150358787" type="dino">
+                                    <param id="0" name="Animation">choose(&quot;Default&quot;,&quot;DefaultAlternate&quot;)</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -750,7 +552,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="484783838180936" type="Function">
                             <param id="0" name="Name">&quot;bombonFlotante&quot;</param>
-                            <param id="1" name="Parameter {n}">random(300,980){###}random(90,210)</param>
+                            <param id="1" name="Parameter {n}">random(300,980){###}random(90,210){###}&quot;color&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -758,13 +560,13 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="630748374775014" type="System" />
                         <condition id="-12" name="Repeat" sid="990107482694972" type="System">
-                            <param id="0" name="Count">choose(2,3)</param>
+                            <param id="0" name="Count">choose(3,4)</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="995487836520563" type="Function">
                             <param id="0" name="Name">&quot;bombonFlotante&quot;</param>
-                            <param id="1" name="Parameter {n}">random(200,400){###}random(890,1250)</param>
+                            <param id="1" name="Parameter {n}">random(290,400){###}random(890,1250){###}&quot;dino&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -772,13 +574,54 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="635669354651374" type="System" />
                         <condition id="-12" name="Repeat" sid="175356210694335" type="System">
-                            <param id="0" name="Count">choose(2,3)</param>
+                            <param id="0" name="Count">choose(3,4)</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="934784419394434" type="Function">
                             <param id="0" name="Name">&quot;bombonFlotante&quot;</param>
-                            <param id="1" name="Parameter {n}">random(880,1080){###}random(890,1250)</param>
+                            <param id="1" name="Parameter {n}">random(880,1190){###}random(890,1250){###}&quot;dino&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="563031731175292">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="963316375640966" type="System" />
+                        <condition id="-12" name="Repeat" sid="639888762852096" type="System">
+                            <param id="0" name="Count">choose(3,4)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="755720612862194" type="Function">
+                            <param id="0" name="Name">&quot;bombonFlotante&quot;</param>
+                            <param id="1" name="Parameter {n}">random(3450,3650){###}random(70,620){###}&quot;dino&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="318709249972277">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="156928793691434" type="System" />
+                        <condition id="-12" name="Repeat" sid="788799378293486" type="System">
+                            <param id="0" name="Count">choose(3,4)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="547467730308840" type="Function">
+                            <param id="0" name="Name">&quot;bombonFlotante&quot;</param>
+                            <param id="1" name="Parameter {n}">random(4350,4550){###}random(70,620){###}&quot;dino&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="333798032797391">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="996556217707852" type="System" />
+                        <condition id="-11" name="For Each" sid="347868797451690" type="System">
+                            <param id="0" name="Object">BombonFlotante</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="508592122881594" type="BombonFlotante">
+                            <param id="0" name="Speed">random(5,80)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -835,8 +678,26 @@
                         <action id="5" name="Check item exists" sid="941502902185301" type="LocalStorage">
                             <param id="0" name="Key">&quot;levelUnlocked&quot;</param>
                         </action>
+                        <action id="5" name="Check item exists" sid="942345891201213" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlockedB&quot;</param>
+                        </action>
                         <action id="5" name="Check item exists" sid="826281500171254" type="LocalStorage">
                             <param id="0" name="Key">&quot;totalScore&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="543703263326644" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosA&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="429098546355381" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalSeparadosA&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="832885522919013" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososA&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="875852795480679" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosB&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="875215669745808" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososB&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="772420883931578" type="System">
                             <param id="0" name="Variable">firstScreen</param>
@@ -844,6 +705,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>On item exists</comment>
                 <event-block sid="426045176245260">
                     <conditions>
                         <condition id="9" name="On item exists" sid="126875170360119" type="LocalStorage">
@@ -892,6 +754,18 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="836135242458759">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="583990714684215" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlockedB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="940473564319633" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlockedB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="908750348455775">
                     <conditions>
                         <condition id="9" name="On item exists" sid="282326464528784" type="LocalStorage">
@@ -904,6 +778,86 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="785605242260506">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="440317732134751" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="286275760511882" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosA&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="449041946684811">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="394064715413794" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalSeparadosA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="971628823850036" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalSeparadosA&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388284006557186">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="770801401774637" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="168262449090820" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososA&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355531933696367">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="388019228760740" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="224114053157106" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="455235317830193">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="207217400062800" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="865055207680854" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososB&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="287100217967530">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="505049354805703" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosB&quot;</param>
+                        </condition>
+                        <condition id="9" name="On item exists" sid="728537342075187" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="354636854955821" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="661265635932328" type="Function">
+                            <param id="0" name="Name">&quot;setNotepadText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>On item get</comment>
                 <event-block sid="775602037994800">
                     <conditions>
                         <condition id="1" name="On item get" sid="967939105293657" type="LocalStorage">
@@ -1024,11 +978,36 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="386835146106019" type="System">
-                            <param id="0" name="Variable">levelUnlocked</param>
+                            <param id="0" name="Variable">levelUnlockedA</param>
                             <param id="1" name="Value">LocalStorage.ItemValue</param>
                         </action>
                         <action id="0" name="Call function" sid="449805606116231" type="Function">
                             <param id="0" name="Name">&quot;setUnlockedLevelsOpacity&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="518884310324868" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="967780105850710">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="967755768771966" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlockedB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="715610523565366" type="System">
+                            <param id="0" name="Variable">levelUnlockedB</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="559483184387866" type="Function">
+                            <param id="0" name="Name">&quot;setUnlockedLevelsOpacity_B&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="826138581893881" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween_B&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -1046,6 +1025,71 @@
                         </action>
                         <action id="0" name="Set text" sid="137514948701407" type="othersText">
                             <param id="0" name="Text">totalScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="200744408522745">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="317590126763455" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="819675550465220" type="System">
+                            <param id="0" name="Variable">totaEntregadosA</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970426646526387">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="480877666173043" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalSeparadosA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="251686520404636" type="System">
+                            <param id="0" name="Variable">totalSeparadosA</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="507769961990382">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="196846024043153" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="262869887157941" type="System">
+                            <param id="0" name="Variable">totalDefectuososA</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="447466098939953">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="903700226777217" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalEntregadosB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="919276105775701" type="System">
+                            <param id="0" name="Variable">totalEntregadosB</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="920816990313809">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="152718392553661" type="LocalStorage">
+                            <param id="0" name="Key">&quot;totalDefectuososB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="333156942932147" type="System">
+                            <param id="0" name="Variable">totalDefectuososB</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1304,7 +1348,7 @@
                         </action>
                         <action id="0" name="Set item" sid="583059782871249" type="LocalStorage">
                             <param id="0" name="Key">&quot;language&quot;</param>
-                            <param id="1" name="Value">&quot;spanish&quot;</param>
+                            <param id="1" name="Value">&quot;español&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1493,12 +1537,54 @@
                                 <condition id="-7" name="Compare instance variable" sid="496120665016734" type="button_text">
                                     <param id="0" name="Instance variable">id</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;title_elige&quot;</param>
+                                    <param id="2" name="Value">&quot;title_lineaA&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="633130641170474" type="button_text">
-                                    <param id="0" name="Text">&quot;Niveles&quot;</param>
+                                    <param id="0" name="Text">&quot;Línea de Producción A&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="326483946309517">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="633343444280433" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_lineaB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="146275760370537" type="button_text">
+                                    <param id="0" name="Text">&quot;Línea de Producción B&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="398689385427540">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="611666563303510" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_irA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="337386005595211" type="button_text">
+                                    <param id="0" name="Text">&quot;Ir a Línea A&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="508123784405430">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="228980222545836" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_irB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="453836009683825" type="button_text">
+                                    <param id="0" name="Text">&quot;Ir a Línea B&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1583,6 +1669,34 @@
                             <actions>
                                 <action id="0" name="Set text" sid="940531468735338" type="button_text">
                                     <param id="0" name="Text">&quot;No&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="523568025007305">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="499442445903242" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_notepad&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="772361156886307" type="button_text">
+                                    <param id="0" name="Text">&quot;Estadísticas de Producción&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="378634368824062">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="651195053632949" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_notepad_text1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="710187004622913" type="button_text">
+                                    <param id="0" name="Text">&quot;Línea de Producción A&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Niveles superados:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Bombones entregados:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Bombones normales separados:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Bombones defectuosos separados:&quot; &amp;newline&amp;&#x0D;&#x0A;newline&amp;&#x0D;&#x0A;&quot;Línea de Producción B&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Niveles superados:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Bombones entregados:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Bombones defectuosos separados:&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1713,12 +1827,54 @@
                                 <condition id="-7" name="Compare instance variable" sid="971918756438406" type="button_text">
                                     <param id="0" name="Instance variable">id</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;title_elige&quot;</param>
+                                    <param id="2" name="Value">&quot;title_lineaA&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="366696312723145" type="button_text">
-                                    <param id="0" name="Text">&quot;Levels&quot;</param>
+                                    <param id="0" name="Text">&quot;Production Line A&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="891934149229440">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="734567637039557" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_lineaB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="443237844518437" type="button_text">
+                                    <param id="0" name="Text">&quot;Production Line B&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="166563477896702">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="935165308629812" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_irA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="583065813293081" type="button_text">
+                                    <param id="0" name="Text">&quot;Go to Line A&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="773523979835941">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="452297005666623" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_irB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="336038038441107" type="button_text">
+                                    <param id="0" name="Text">&quot;Go to Line B&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1803,6 +1959,34 @@
                             <actions>
                                 <action id="0" name="Set text" sid="335941961605407" type="button_text">
                                     <param id="0" name="Text">&quot;No&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="775126119618129">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="343737925567514" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_notepad&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="994477675707211" type="button_text">
+                                    <param id="0" name="Text">&quot;Production Statistics&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="465397960761002">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="623498144107139" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_notepad_text1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="900316420142462" type="button_text">
+                                    <param id="0" name="Text">&quot;Production Line A&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Levels completed:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Chocolates delivered:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Regular chocolates sorted:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Defective chocolates sorted:&quot; &amp;newline&amp;&#x0D;&#x0A;newline&amp;&#x0D;&#x0A;&quot;Production Line B&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Levels completed:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Chocolates delivered:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Defective chocolates sorted:&quot; </param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1933,12 +2117,54 @@
                                 <condition id="-7" name="Compare instance variable" sid="397611307874011" type="button_text">
                                     <param id="0" name="Instance variable">id</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;title_elige&quot;</param>
+                                    <param id="2" name="Value">&quot;title_lineaA&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="112571473642970" type="button_text">
-                                    <param id="0" name="Text">&quot;Level&quot;</param>
+                                    <param id="0" name="Text">&quot;Produktionslinie A&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="146786700885747">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="825868422830133" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_lineaB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="936148911147609" type="button_text">
+                                    <param id="0" name="Text">&quot;Produktionslinie B&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="947046293355193">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="493962986646546" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_irA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="732269227263003" type="button_text">
+                                    <param id="0" name="Text">&quot;Gehe zu Linie A&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="490272909404119">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="622047226781458" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_irB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="918587349771235" type="button_text">
+                                    <param id="0" name="Text">&quot;Gehe zu Linie B&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2023,6 +2249,34 @@
                             <actions>
                                 <action id="0" name="Set text" sid="163026887698897" type="button_text">
                                     <param id="0" name="Text">&quot;Nein&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="113238339404957">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="548834715989684" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_notepad&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="380768205985991" type="button_text">
+                                    <param id="0" name="Text">&quot;Produktionsstatistik&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="645283852584570">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="647939713249000" type="button_text">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;title_notepad_text1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="108294492173522" type="button_text">
+                                    <param id="0" name="Text">&quot;Produktionslinie A&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Abgeschlossene Ebenen:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Gelieferte Pralinen:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Sortierte normale Pralinen:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Sortierte fehlerhafte Pralinen:&quot; &amp;newline&amp;&#x0D;&#x0A;newline&amp;&#x0D;&#x0A;&quot;Produktionslinie B&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Abgeschlossene Ebenen:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Gelieferte Pralinen:&quot; &amp;newline&amp;&#x0D;&#x0A;&quot;Sortierte fehlerhafte Pralinen:&quot; </param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2309,6 +2563,1005 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="165449595190592" title="Background Fade">
+            <sub-events>
+                <comment>Level Select Background</comment>
+                <event-block sid="844892317961841">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="262339235500555" type="Camera">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">1280</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="628039732911592" type="level_background">
+                            <param id="0" name="Instance variable">isVisible</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="295837212455207" type="level_background">
+                            <param id="0" name="Fade-in time">0.3</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="233885924584042" type="level_background">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="375203708198639" type="level_background" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="865390801344515" type="level_background" />
+                        <action id="-13" name="Set boolean" sid="856333266094732" type="level_background">
+                            <param id="0" name="Instance variable">isVisible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="874917170282767">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Is visible" sid="228835348315848" type="level_background" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="665552371253764" type="level_background">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="452994076996171">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="173091027725518" type="Camera">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">1280</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="455018516427634" type="level_background">
+                            <param id="0" name="Instance variable">isVisible</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="685303928963004" type="level_background">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="263930823204685" type="level_background">
+                            <param id="0" name="Fade-out time">0.3</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="209298776227405" type="level_background" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="415476556295395" type="level_background" />
+                        <action id="-13" name="Set boolean" sid="651899202244617" type="level_background">
+                            <param id="0" name="Instance variable">isVisible</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>LevelHUD Layer (Score)</comment>
+                <event-block sid="217890293414407">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="993345314841602" type="Camera">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">1920+300</param>
+                        </condition>
+                        <condition id="-17" name="Compare opacity" sid="293948446033208" type="System">
+                            <param id="0" name="Layer">&quot;LevelHUD&quot;</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="125902912012291" type="System">
+                            <param id="0" name="Layer">&quot;LevelHUD&quot;</param>
+                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;LevelHUD&quot;), 100, dt / 0.2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="243107527339593">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="315850725366260" type="System" />
+                        <condition id="-17" name="Compare opacity" sid="778266721623714" type="System">
+                            <param id="0" name="Layer">&quot;LevelHUD&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="948893719898893" type="System">
+                            <param id="0" name="Layer">&quot;LevelHUD&quot;</param>
+                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;LevelHUD&quot;), 0, dt / 0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="104279061509980">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="770041579750113" type="Camera">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="337023003008979" type="title_background">
+                            <param id="0" name="Opacity">lerp(title_background.Opacity,75,dt/0.3)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="218241806671847">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="928048338109283" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="173007941934053" type="title_background">
+                            <param id="0" name="Opacity">lerp(title_background.Opacity,100,dt/0.3)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Notepad</comment>
+                <event-block sid="372217113057234">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="500865986558183" type="Camera">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">2800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="885351139256699" type="notepad">
+                            <param id="0" name="Opacity">lerp(notepad.Opacity,0,dt*10)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="109107175634884">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="503297649030187" type="ButtonsHover">
+                                    <param id="0" name="Unique ID">notepad.UID</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="510266543472420" type="ButtonSound">
+                                    <param id="0" name="Unique ID">notepad.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="392281139567703" type="ButtonsHover">
+                                    <param id="0" name="Instance variable">activeHover</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="990249219409016" type="ButtonSound">
+                                    <param id="0" name="Instance variable">activeSound</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="638737637902287">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="390331765915727" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="952908392199209" type="notepad">
+                            <param id="0" name="Opacity">lerp(notepad.Opacity,100,dt*10)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="100473847109822">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="349328869885054" type="ButtonsHover">
+                                    <param id="0" name="Unique ID">notepad.UID</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="704528710435211" type="ButtonSound">
+                                    <param id="0" name="Unique ID">notepad.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="800787249290741" type="ButtonsHover">
+                                    <param id="0" name="Instance variable">activeHover</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="278610406787583" type="ButtonSound">
+                                    <param id="0" name="Instance variable">activeSound</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Button Back</comment>
+                <event-block sid="791594801040712">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="783756149309114" type="Camera">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">-300</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="769085312511995" type="Camera">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">1920+300</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="836776522088712" type="Camera">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">1020</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="282272257261967" type="button_back">
+                            <param id="0" name="Opacity">lerp(button_back.Opacity,0,dt/0.1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="728108030721521">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="347400328449605" type="ButtonsHover">
+                                    <param id="0" name="Unique ID">button_back.UID</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="838084075125497" type="ButtonSound">
+                                    <param id="0" name="Unique ID">button_back.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="187184563202337" type="ButtonsHover">
+                                    <param id="0" name="Instance variable">activeHover</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="400511146444284" type="ButtonSound">
+                                    <param id="0" name="Instance variable">activeSound</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="616816900647421">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="941313427794819" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="101261035389288" type="button_back">
+                            <param id="0" name="Opacity">lerp(button_back.Opacity,100,dt/0.3)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="406310889076461">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="927693678767261" type="ButtonsHover">
+                                    <param id="0" name="Unique ID">button_back.UID</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="963942351894322" type="ButtonSound">
+                                    <param id="0" name="Unique ID">button_back.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="983666613988979" type="ButtonsHover">
+                                    <param id="0" name="Instance variable">activeHover</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="556489753548238" type="ButtonSound">
+                                    <param id="0" name="Instance variable">activeSound</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="currentLine" sid="495881753127461" static="0" type="text">A</variable>
+        <variable constant="0" name="levelUnlockedA" sid="119735757572878" static="0" type="number">1</variable>
+        <event-group description="" sid="142629356392536" title="Level Routing &amp; Unlock A">
+            <sub-events>
+                <event-block sid="572881617573957">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="950030285233901" type="Touch">
+                            <param id="0" name="Object">button_bg</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="648987982562661" type="button_bg">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">levelUnlockedA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="912737741247418" type="System">
+                            <param id="0" name="Variable">currentLevelA</param>
+                            <param id="1" name="Value">button_bg.level</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="125286326959997" type="System">
+                            <param id="0" name="Variable">currentLine</param>
+                            <param id="1" name="Value">&quot;A&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="540502221774830" type="Function">
+                            <param id="0" name="Name">&quot;startTransition&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="209330127405615" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="533699074061081">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="448805058839442" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="357828653049985" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="150067561655035" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="798403842117237" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="951947023030972" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="322580383639621" type="System">
+                                    <param id="0" name="Layout">Supervisora</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="181972627026960">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="599961945030891" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="407025644959862" type="System">
+                                    <param id="0" name="Layout">LevelA</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>TESTING - DESBLOQUEAR TODOS</comment>
+                <event-block sid="808785368235029">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="305358687411524" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="957992945197013" type="Function">
+                            <param id="0" name="Name">&quot;setUnlockedLevelsOpacity&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="202227017435400" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block bookmark="1" sid="414839892744937">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="167311883704436" type="Touch">
+                            <param id="0" name="Object">title_button</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="538911116458782" type="title_button">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;desbloquearA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="662817724667648" type="System">
+                            <param id="0" name="Variable">levelUnlockedA</param>
+                            <param id="1" name="Value">13</param>
+                        </action>
+                        <action id="0" name="Set item" sid="998040789397699" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlocked&quot;</param>
+                            <param id="1" name="Value">levelUnlockedA</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="793912912029792" type="button_bg">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="0" name="Call function" sid="453344892846499" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="862735661805337" type="Function">
+                            <param id="0" name="Name">&quot;setNotepadText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block bookmark="1" sid="105481320727601">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="870871186738590" type="Touch">
+                            <param id="0" name="Object">title_button</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="270012736495786" type="title_button">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;bloquearA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="792415045417875" type="System">
+                            <param id="0" name="Variable">levelUnlockedA</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set item" sid="404850313558377" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlocked&quot;</param>
+                            <param id="1" name="Value">levelUnlockedA</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="927781485250032" type="button_bg">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                        <action id="0" name="Call function" sid="628248175631753" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="201695756738500" type="Function">
+                            <param id="0" name="Name">&quot;setNotepadText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="150271389153362">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="315292498587937" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">levelUnlockedA</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="638367051638048" type="button_bg">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="945556930398251">
+                    <conditions>
+                        <condition id="0" name="On function" sid="698812603045384" type="Function">
+                            <param id="0" name="Name">&quot;setUnlockedLevelsOpacity&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="557643283926675">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="435348606340378" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">levelUnlockedA</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="242706574374716" type="button_bg">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="241173222756982">
+                    <conditions>
+                        <condition id="0" name="On function" sid="722197702478478" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="203407058519475">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="860944915476839" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">levelUnlockedA</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="292476219843647" type="button_bg">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="951281015358242">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="398817930436215" type="button_bg">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">levelUnlockedA</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="512687207723607" type="button_bg">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>MENU RESTABLECER PROGRESO</comment>
+                <event-block sid="342122439393432">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="892036691936880" type="Touch">
+                            <param id="0" name="Object">title_button</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="655169126304885" type="title_button">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;title_restablecer_si&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear storage" sid="759671230625536" type="LocalStorage" />
+                        <action id="-21" name="Reset global variables" sid="576735676506722" type="System" />
+                        <action id="-26" name="Restart layout" sid="543987413754504" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="405768760260856">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="223963683359091" type="Touch">
+                            <param id="0" name="Object">title_button</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="449586481486562" type="title_button">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;title_restablecer&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="454389247939432" type="Camera">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-640</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="967190230547645" type="Camera">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">1080</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="823492988987830" type="Camera">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="974268664051424">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="163386661914667" type="Touch">
+                            <param id="0" name="Object">title_button</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="673238018897974" type="title_button">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;title_restablecer_no&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="759999443026613" type="Camera">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-640</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="697379262880779" type="Camera">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">360</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="949295185918812" type="Camera">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="levelUnlockedB" sid="236180060226764" static="0" type="number">1</variable>
+        <event-group description="" sid="197282892745946" title="Level Routing &amp; Unlock B">
+            <sub-events>
+                <event-block sid="147261246191270">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="417791583039789" type="Touch">
+                            <param id="0" name="Object">button_bg2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="624867122451217" type="button_bg2">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">levelUnlockedB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="221635541311586" type="System">
+                            <param id="0" name="Variable">currentLine</param>
+                            <param id="1" name="Value">&quot;B&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="990852178186525" type="System">
+                            <param id="0" name="Variable">currentLevelB</param>
+                            <param id="1" name="Value">button_bg2.level</param>
+                        </action>
+                        <action id="0" name="Call function" sid="606946035389948" type="Function">
+                            <param id="0" name="Name">&quot;startTransition&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="362166112271110" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="864445753515771">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="942843188685161" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="788619527466002" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="929764138282249" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="949598909277832" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="244974084395401" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="935765459488145" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="152109653837770" type="System">
+                                    <param id="0" name="Layout">Supervisora</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="285974648180069">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="574743366094022" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="535499075085333" type="System">
+                                    <param id="0" name="Layout">LevelB</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>start unlock events</comment>
+                <event-block sid="412603909971668">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="371109569369290" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="389607078770853" type="Function">
+                            <param id="0" name="Name">&quot;setUnlockedLevelsOpacity_B&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="796437602833123" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween_B&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block bookmark="1" sid="798080645885314">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="338387633374587" type="Touch">
+                            <param id="0" name="Object">title_button</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="242104416685484" type="title_button">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;desbloquearB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="627438655101895" type="System">
+                            <param id="0" name="Variable">levelUnlockedB</param>
+                            <param id="1" name="Value">13</param>
+                        </action>
+                        <action id="0" name="Set item" sid="166366596347033" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlockedB&quot;</param>
+                            <param id="1" name="Value">levelUnlockedB</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="855349652437828" type="button_bg2">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="0" name="Call function" sid="474925373413304" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween_B&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="273236463661820" type="Function">
+                            <param id="0" name="Name">&quot;setNotepadText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block bookmark="1" sid="795766696555048">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="818325684479574" type="Touch">
+                            <param id="0" name="Object">title_button</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="669398908359908" type="title_button">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;bloquearB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="113031058266781" type="System">
+                            <param id="0" name="Variable">levelUnlockedB</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set item" sid="884906765731879" type="LocalStorage">
+                            <param id="0" name="Key">&quot;levelUnlockedB&quot;</param>
+                            <param id="1" name="Value">levelUnlockedB</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="154767749590126" type="button_bg2">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                        <action id="0" name="Call function" sid="207087152061134" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween_B&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="957486411522746" type="Function">
+                            <param id="0" name="Name">&quot;setNotepadText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="581663709895937">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="990037519436235" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">levelUnlockedB</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="571771161314080" type="button_bg2">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="511900265069845">
+                    <conditions>
+                        <condition id="0" name="On function" sid="988821434889179" type="Function">
+                            <param id="0" name="Name">&quot;setUnlockedLevelsOpacity_B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="527333500946650">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="188305229233176" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">levelUnlockedB</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="544546090032311" type="button_bg2">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="877504263235037">
+                    <conditions>
+                        <condition id="0" name="On function" sid="267535098011481" type="Function">
+                            <param id="0" name="Name">&quot;level_button_tween_B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="455226145521475">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="531702325649310" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">levelUnlockedB</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="576452626598375" type="button_bg2">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="702016433788275">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="109345277036894" type="button_bg2">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">levelUnlockedB</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="635673792435594" type="button_bg2">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="622197851064725" title="Trophy">
+            <sub-events>
+                <event-block sid="195916951048053">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="361326368679776" type="Touch">
+                            <param id="0" name="Object">Trophy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="927253653404594" type="Function">
+                            <param id="0" name="Name">&quot;startTransition&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="339492295699963" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="515946499339499">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="246365266748406" type="Trophy">
+                                    <param id="0" name="Unique ID">357</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="175667851834679" type="System">
+                                    <param id="0" name="Variable">levelUnlockedA</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="815814007756443" type="System">
+                                    <param id="0" name="Variable">currentLevelA</param>
+                                    <param id="1" name="Value">13</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="334099181859636" type="System">
+                                    <param id="0" name="Variable">currentLine</param>
+                                    <param id="1" name="Value">&quot;A&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="561123204813888" type="System">
+                                    <param id="0" name="Layout">Supervisora</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="836252569047581">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="744507635352071" type="Trophy">
+                                    <param id="0" name="Unique ID">356</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="882736114198860" type="System">
+                                    <param id="0" name="Variable">levelUnlockedB</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="211207088348633" type="System">
+                                    <param id="0" name="Variable">currentLevelB</param>
+                                    <param id="1" name="Value">13</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="947742431156246" type="System">
+                                    <param id="0" name="Variable">currentLine</param>
+                                    <param id="1" name="Value">&quot;B&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="394761397841541" type="System">
+                                    <param id="0" name="Layout">Supervisora</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="472983323383752">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="527989745234722" type="System">
+                            <param id="0" name="Variable">levelUnlockedA</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">13</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="935843195808625" type="Trophy">
+                            <param id="0" name="Unique ID">357</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="357945116500595" type="Trophy">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="826686150603245">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="901630092462746" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="593694959185938" type="Trophy">
+                            <param id="0" name="Unique ID">357</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="648900873706312" type="Trophy">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="387773102518184">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="247610045705424" type="System">
+                            <param id="0" name="Variable">levelUnlockedB</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">13</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="120727227507260" type="Trophy">
+                            <param id="0" name="Unique ID">356</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="247237375751791" type="Trophy">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="181131831236782">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="702267263145748" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="140554686543063" type="Trophy">
+                            <param id="0" name="Unique ID">356</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="311234675997753" type="Trophy">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="totaEntregadosA" sid="574083401709981" static="0" type="number">0</variable>
+        <variable constant="0" name="totalSeparadosA" sid="561465316591075" static="0" type="number">0</variable>
+        <variable constant="0" name="totalDefectuososA" sid="116952363998941" static="0" type="number">0</variable>
+        <variable constant="0" name="totalEntregadosB" sid="262626591379295" static="0" type="number">0</variable>
+        <variable constant="0" name="totalDefectuososB" sid="416462087126077" static="0" type="number">0</variable>
+        <event-group description="" sid="659317904233288" title="Metas de Producción">
+            <sub-events>
+                <event-block sid="755546004557666">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="958032496227335" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="752593092155146" type="Function">
+                            <param id="0" name="Name">&quot;setNotepadText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="487311591137165">
+                    <conditions>
+                        <condition id="0" name="On function" sid="801938715281302" type="Function">
+                            <param id="0" name="Name">&quot;setNotepadText&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="485604535367265" type="button_text">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;title_notepad_text2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="407754867975451" type="button_text">
+                            <param id="0" name="Text">newline&amp;&#x0D;&#x0A;levelUnlockedA-1&amp;&quot; / 12&quot; &amp;newline&amp;&#x0D;&#x0A;totaEntregadosA &amp;newline&amp;&#x0D;&#x0A;totalSeparadosA &amp;newline&amp;&#x0D;&#x0A;totalDefectuososA &amp;newline&amp;&#x0D;&#x0A;newline&amp;&#x0D;&#x0A;newline&amp;&#x0D;&#x0A;levelUnlockedB-1&amp;&quot; / 12&quot; &amp;newline&amp;&#x0D;&#x0A;totalEntregadosB &amp;newline&amp;&#x0D;&#x0A;totalDefectuososB  &#x0D;&#x0A;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

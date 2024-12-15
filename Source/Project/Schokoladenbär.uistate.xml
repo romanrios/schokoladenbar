@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">LevelA</layout>
+        <layout order="1">LevelB</layout>
+        <layout active="1" order="4">Title</layout>
+        <event-sheet order="2">LevelA_logic</event-sheet>
+        <event-sheet order="3">LevelB_logic</event-sheet>
+        <event-sheet order="5">Title</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="BombonNormal" />
+        <family expanded="0" name="ButtonsHover" />
+        <family expanded="0" name="BombonDefectuoso" />
+        <family expanded="0" name="ButtonSound" />
+        <family expanded="0" name="Texts" />
+        <family expanded="0" name="BombonTodos" />
+        <family expanded="0" name="UI_bombones" />
+        <family expanded="0" name="Confeti" />
+        <family expanded="0" name="BombonFlotante" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="0" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/Level_scenario/" />
+        <folder expanded="0" path="object-folder/Level_hitboxes/" />
+        <folder expanded="0" path="object-folder/Bombones/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Fonts/" />
+        <folder expanded="1" path="animation-folder/button_back/" />
+        <folder expanded="1" path="animation-folder/smallArrow/" />
+        <folder expanded="1" path="animation-folder/button_fullscreen/" />
+        <folder expanded="1" path="animation-folder/coin/" />
+        <folder expanded="1" path="animation-folder/clock/" />
+        <folder expanded="1" path="animation-folder/Black_bg/" />
+        <folder expanded="1" path="animation-folder/textContainer/" />
+        <folder expanded="1" path="animation-folder/button_bg/" />
+        <folder expanded="1" path="animation-folder/title_button/" />
+        <folder expanded="1" path="animation-folder/title_title/" />
+        <folder expanded="1" path="animation-folder/heart/" />
+        <folder expanded="1" path="animation-folder/x_red/" />
+        <folder expanded="1" path="animation-folder/coin_plain/" />
+        <folder expanded="1" path="animation-folder/three_stars/" />
+        <folder expanded="1" path="animation-folder/score_bg/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/mark_arrow/" />
+        <folder expanded="1" path="animation-folder/music_icon/" />
+        <folder expanded="1" path="animation-folder/sfx_icon/" />
+        <folder expanded="1" path="animation-folder/button_bg2/" />
+        <folder expanded="1" path="animation-folder/play/" />
+        <folder expanded="1" path="animation-folder/pause/" />
+        <folder expanded="1" path="animation-folder/level_background/" />
+        <folder expanded="1" path="animation-folder/cinta_engranaje/" />
+        <folder expanded="1" path="animation-folder/cinta_L/" />
+        <folder expanded="1" path="animation-folder/cinta2/" />
+        <folder expanded="1" path="animation-folder/bombon_containers/" />
+        <folder expanded="1" path="animation-folder/CajonFinal/" />
+        <folder expanded="1" path="animation-folder/CintaParche/" />
+        <folder expanded="1" path="animation-folder/title_background/" />
+        <folder expanded="1" path="animation-folder/pallet/" />
+        <folder expanded="1" path="animation-folder/shadowLittle/" />
+        <folder expanded="1" path="animation-folder/yellowContainer/" />
+        <folder expanded="1" path="animation-folder/greyContainer/" />
+        <folder expanded="1" path="animation-folder/redContainer/" />
+        <folder expanded="1" path="animation-folder/blueContainer/" />
+        <folder expanded="1" path="animation-folder/cinta3/" />
+        <folder expanded="1" path="animation-folder/linea2_isometric/" />
+        <folder expanded="1" path="animation-folder/Recurso/" />
+        <folder expanded="1" path="animation-folder/Recurso4/" />
+        <folder expanded="1" path="animation-folder/Recurso3/" />
+        <folder expanded="1" path="animation-folder/mesaDinos/" />
+        <folder expanded="1" path="animation-folder/recorrido/" />
+        <folder expanded="1" path="animation-folder/Recurso2/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/shadow/" />
+        <folder expanded="1" path="animation-folder/recorrido2/" />
+        <folder expanded="1" path="animation-folder/cajasenpallet/" />
+        <folder expanded="1" path="animation-folder/confeti_amarillo/" />
+        <folder expanded="1" path="animation-folder/confeti_azul/" />
+        <folder expanded="1" path="animation-folder/confeti_rojo/" />
+        <folder expanded="1" path="animation-folder/confeti_verde/" />
+        <folder expanded="1" path="animation-folder/EmergencyStop/" />
+        <folder expanded="1" path="animation-folder/Trophy/" />
+        <folder expanded="1" path="animation-folder/circle_white_blur/" />
+        <folder expanded="1" path="animation-folder/Supervisora/" />
+        <folder expanded="1" path="animation-folder/BlueMark/" />
+        <folder expanded="1" path="animation-folder/BlueTarget/" />
+        <folder expanded="1" path="animation-folder/Destroy/" />
+        <folder expanded="1" path="animation-folder/Spawn/" />
+        <folder expanded="1" path="animation-folder/Cinta/" />
+        <folder expanded="1" path="animation-folder/DefectuosoTarget/" />
+        <folder expanded="1" path="animation-folder/DefectuosoMark/" />
+        <folder expanded="1" path="animation-folder/Out/" />
+        <folder expanded="1" path="animation-folder/redScreen/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/RedMark/" />
+        <folder expanded="1" path="animation-folder/YellowMark/" />
+        <folder expanded="1" path="animation-folder/RedTarget/" />
+        <folder expanded="1" path="animation-folder/YellowTarget/" />
+        <folder expanded="1" path="animation-folder/redScreen2/" />
+        <folder expanded="1" path="animation-folder/bombon_amarillo/" />
+        <folder expanded="1" path="animation-folder/bombon_amarillo_defectuoso/" />
+        <folder expanded="1" path="animation-folder/bombon_azul/" />
+        <folder expanded="1" path="animation-folder/bombon_azul_defectuoso/" />
+        <folder expanded="1" path="animation-folder/bombon_chocolate/" />
+        <folder expanded="1" path="animation-folder/bombon_rojo/" />
+        <folder expanded="1" path="animation-folder/bombon_rojo_defectuoso/" />
+        <folder expanded="1" path="animation-folder/bombon_verde/" />
+        <folder expanded="1" path="animation-folder/bombon_verde_defectuoso/" />
+        <folder expanded="1" path="animation-folder/bombon_azul_brillo/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_azul_brillo/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_amarillo_defectuoso/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_rojo_defectuoso/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_verde_defectuoso/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_azul_defectuoso/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_amarillo/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_verde/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_rojo/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_azul/" />
+        <folder expanded="1" path="animation-folder/UI_bombon_chocolate/" />
+        <folder expanded="1" path="animation-folder/bombon_reloj/" />
+        <folder expanded="1" path="animation-folder/dino/" />
+        <folder expanded="1" path="animation-folder/dinoBroken/" />
+        <folder expanded="1" path="animation-folder/dinoDrag/" />
+        <folder expanded="1" path="animation-folder/notepad/" />
+        <folder expanded="1" path="animation-folder/choco_square/" />
+        <folder expanded="1" path="animation-folder/extralife/" />
+    </folders-expanded>
+</c2uistate>

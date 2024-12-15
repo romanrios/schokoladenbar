@@ -73,6 +73,11 @@
                 <condition id="7" name="Cursor is over object" sid="319649644556168" type="Mouse">
                     <param id="0" name="Object">ButtonsHover</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="919751492677175" type="ButtonsHover">
+                    <param id="0" name="Instance variable">activeHover</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set cursor style" sid="930704571824791" type="Mouse">
@@ -96,6 +101,11 @@
                 <condition id="17" name="On tap object" sid="878833008110864" type="Touch">
                     <param id="0" name="Object">ButtonSound</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="338391812557628" type="ButtonSound">
+                    <param id="0" name="Instance variable">activeSound</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Play" sid="404751542147661" type="Audio">
@@ -103,6 +113,96 @@
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">volumeSfx-3</param>
                     <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="transitionDuration" sid="384197111447144" static="0" type="number">1.5</variable>
+        <event-group description="" sid="137896743088065" title="Transition" />
+        <event-block sid="172407720964590">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="873818643033171" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="LiteTween" id="3" name="Set target" sid="116545934603512" type="choco_square">
+                    <param id="0" name="Target is">0</param>
+                    <param id="1" name="Relativity">1</param>
+                    <param id="2" name="Value">choose(-3000,3000)</param>
+                </action>
+                <action behavior="LiteTween" id="3" name="Set target" sid="191006826704240" type="choco_square">
+                    <param id="0" name="Target is">1</param>
+                    <param id="1" name="Relativity">1</param>
+                    <param id="2" name="Value">choose(-1200,1200)</param>
+                </action>
+                <action behavior="LiteTween2" id="3" name="Set target" sid="778537898085992" type="choco_square">
+                    <param id="0" name="Target is">2</param>
+                    <param id="1" name="Relativity">1</param>
+                    <param id="2" name="Value">random(-360,360)</param>
+                </action>
+                <action behavior="LiteTween" id="1" name="Set duration" sid="365472470297950" type="choco_square">
+                    <param id="0" name="Duration">random(0.5,1.5)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="173642461535721">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="674808346195981" type="System">
+                            <param id="0" name="Variable">firstScreen</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="507516428588487" type="choco_square">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="549015397859671" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="687881190711207" type="choco_square">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="556016934464390">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="391584148080893" type="System">
+                            <param id="0" name="Variable">firstScreen</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="752189262657740" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Play" sid="685281782056826" type="Audio">
+                            <param id="0" name="Audio file">swoosh</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">volumeSfx</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="615250609116723">
+            <conditions>
+                <condition id="0" name="On function" sid="430973065851284" type="Function">
+                    <param id="0" name="Name">&quot;startTransition&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="443794532084226" type="Audio">
+                    <param id="0" name="Audio file">swoosh</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">volumeSfx</param>
+                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action behavior="LiteTween2" id="11" name="Reverse" sid="173446179225889" type="choco_square">
+                    <param id="0" name="Reverse mode">0</param>
+                </action>
+                <action behavior="LiteTween" id="11" name="Reverse" sid="679791679242276" type="choco_square">
+                    <param id="0" name="Reverse mode">0</param>
                 </action>
             </actions>
         </event-block>

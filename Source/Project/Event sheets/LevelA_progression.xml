@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelA_progression</name>
+    <events>
+        <variable constant="0" name="currentLevelA" sid="105026023243152" static="0" type="number">1</variable>
+        <include>Main</include>
+        <include>LevelA_logic</include>
+        <event-block sid="157483741894669">
+            <conditions>
+                <condition id="0" name="On function" sid="714570307515273" type="Function">
+                    <param id="0" name="Name">&quot;setTimerText&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="100192466442445" type="timerText">
+                    <param id="0" name="Text">floor(timer/60%60)&amp;&quot;:&quot;&amp;zeropad((floor(timer%60)),2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Common events</comment>
+        <event-block sid="748391302365892">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="354278552561353" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="239363608310094" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">currentLevelA*5+55</param>
+                </action>
+                <action id="0" name="Call function" sid="141681815043596" type="Function">
+                    <param id="0" name="Name">&quot;setTimerText&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="517980288430898" type="System">
+                    <param id="0" name="Variable">cintaSpeed</param>
+                    <param id="1" name="Value">(currentLevelA-1)/20+1</param>
+                </action>
+                <action id="-9" name="Set value" sid="442710014704005" type="System">
+                    <param id="0" name="Variable">defectuosoCounter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="569085743237292" type="System">
+                    <param id="0" name="Variable">normalCounter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="102692536088451" type="System">
+                    <param id="0" name="Variable">errors</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Levels</comment>
+        <event-block sid="840253354050954">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="232809798970302" type="System">
+                    <param id="0" name="Variable">currentLevelA</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="958773056880331">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="573105145894635" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="531420416510352" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="267719242892261" type="System">
+                            <param id="0" name="Variable">bombonFreqMax</param>
+                            <param id="1" name="Value">2.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="601494427312217">
+                    <conditions>
+                        <condition id="0" name="On function" sid="713779867522441" type="Function">
+                            <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="406366626173206" type="System">
+                            <param id="0" name="Variable">bombonRandom</param>
+                            <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="809392385189750">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="682896939013798" type="System">
+                    <param id="0" name="Variable">currentLevelA</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="506631342904201">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="138931636799094" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="472941353344241" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="906105674095578" type="System">
+                            <param id="0" name="Variable">bombonFreqMax</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="805896369016984">
+                    <conditions>
+                        <condition id="0" name="On function" sid="823255492003353" type="Function">
+                            <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="755182447270712" type="System">
+                            <param id="0" name="Variable">bombonRandom</param>
+                            <param id="1" name="Value">choose(1,1,2,3,4,5,6,7,8,9)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="648643279592331">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="173876397587896" type="System">
+                    <param id="0" name="Variable">currentLevelA</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="823426403794146">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="894004150228162" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="172948283566034" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="567403023989215" type="System">
+                            <param id="0" name="Variable">bombonFreqMax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="101182432104812">
+                    <conditions>
+                        <condition id="0" name="On function" sid="242334066418832" type="Function">
+                            <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="496452808146815" type="System">
+                            <param id="0" name="Variable">bombonRandom</param>
+                            <param id="1" name="Value">choose(1,1,1,2,2,2,3,3,3,4,4,4,5,6,7,8,9,10,11)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="520546394428751">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="752010752770011" type="System">
+                    <param id="0" name="Variable">currentLevelA</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="265182696585648">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="999766363251628" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="926265262780292" type="System">
+                            <param id="0" name="Variable">cintaSpeed</param>
+                            <param id="1" name="Value">cintaSpeed*1.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="252420691630949">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="912618081540932" type="System">
+                    <param id="0" name="Variable">currentLevelA</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">11</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="156291232641091">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="883917783826244" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="992642261031141" type="System">
+                            <param id="0" name="Variable">cintaSpeed</param>
+                            <param id="1" name="Value">cintaSpeed*1.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="520440064436243">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="524839830758043" type="System">
+                    <param id="0" name="Variable">currentLevelA</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">12</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="796111630919300">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="541426553868989" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="201139957031225" type="System">
+                            <param id="0" name="Variable">cintaSpeed</param>
+                            <param id="1" name="Value">cintaSpeed*1.4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Destruir Boton Stop en niveles &lt; 9</comment>
+        <event-block sid="851627888775827">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="998858797085806" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="658216640639748">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="413510549938432" type="System">
+                            <param id="0" name="Variable">currentLevelA</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="274728800319463" type="cinta_L">
+                            <param id="0" name="Unique ID">358</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="158304444580880" type="blueText">
+                            <param id="0" name="Unique ID">360</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="104968279944341" type="EmergencyStop" />
+                        <action id="-9" name="Destroy" sid="685349163499875" type="blueText" />
+                        <action id="-9" name="Destroy" sid="385192848217903" type="cinta_L" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
