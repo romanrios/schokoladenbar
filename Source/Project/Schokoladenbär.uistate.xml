@@ -10,12 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">LevelA</layout>
-        <layout order="1">LevelB</layout>
-        <layout order="4">Title</layout>
-        <event-sheet order="2">LevelA_logic</event-sheet>
-        <event-sheet active="1" order="3">LevelB_logic</event-sheet>
-        <event-sheet order="5">Title</event-sheet>
+        <layout active="1" order="1">Title</layout>
+        <event-sheet order="0">Title</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,12 +31,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="BombonFlotante" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/UI/" />
         <folder expanded="0" path="object-folder/Level_scenario/" />
         <folder expanded="0" path="object-folder/Level_hitboxes/" />
-        <folder expanded="0" path="object-folder/Bombones/" />
-        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="1" path="object-folder/Bombones/" />
+        <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />

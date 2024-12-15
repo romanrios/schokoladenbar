@@ -876,6 +876,10 @@
                             <param id="0" name="Name">&quot;setVolumeMusic&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="835944849469133" type="Function">
+                            <param id="0" name="Name">&quot;checkSilent&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="151531655600872">
@@ -894,6 +898,10 @@
                         </action>
                         <action id="0" name="Call function" sid="897492434847629" type="Function">
                             <param id="0" name="Name">&quot;setVolumeSfx&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="621200965054809" type="Function">
+                            <param id="0" name="Name">&quot;checkSilent&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -1139,6 +1147,10 @@
                         <action id="3" name="Set value" sid="133375859528344" type="SliderBar_sfx">
                             <param id="0" name="Value">volumeSfx</param>
                         </action>
+                        <action id="0" name="Call function" sid="770032597289568" type="Function">
+                            <param id="0" name="Name">&quot;checkSilent&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="683526142329841">
@@ -1153,6 +1165,10 @@
                         <action id="0" name="Set item" sid="545604812682725" type="LocalStorage">
                             <param id="0" name="Key">&quot;volumeMusic&quot;</param>
                             <param id="1" name="Value">SliderBar_music.Value</param>
+                        </action>
+                        <action id="0" name="Call function" sid="481279179313431" type="Function">
+                            <param id="0" name="Name">&quot;checkSilent&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -1174,6 +1190,10 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">volumeSfx-3</param>
                             <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="234989451679254" type="Function">
+                            <param id="0" name="Name">&quot;checkSilent&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -1248,6 +1268,75 @@
                                 <action id="-9" name="Set value" sid="320639542230375" type="System">
                                     <param id="0" name="Variable">volumeSfx</param>
                                     <param id="1" name="Value">-999</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="192962283305457">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="735571800848215" type="Touch">
+                            <param id="0" name="Object">dino</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="674082146496543">
+                            <conditions>
+                                <condition id="3" name="Is silent" sid="405164396564151" type="Audio" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="181194426586355" type="dino">
+                                    <param id="0" name="Angle">dino.Angle+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="928135324986204">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="449074815672654" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="503469648502016" type="dino">
+                                    <param id="0" name="Angle">dino.Angle-10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="875527074926552">
+                    <conditions>
+                        <condition id="0" name="On function" sid="366376547477229" type="Function">
+                            <param id="0" name="Name">&quot;checkSilent&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="233727041345682">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="547759439834276" type="System">
+                                    <param id="0" name="Variable">volumeMusic</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">-29</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="910926034950453" type="System">
+                                    <param id="0" name="Variable">volumeSfx</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">-29</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="758977816919542" type="Audio">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="570384978254384">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="798542928348887" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="494864296143730" type="Audio">
+                                    <param id="0" name="Mode">1</param>
                                 </action>
                             </actions>
                         </event-block>
