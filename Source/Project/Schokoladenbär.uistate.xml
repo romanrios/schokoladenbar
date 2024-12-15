@@ -12,9 +12,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">LevelA</layout>
         <layout order="1">LevelB</layout>
-        <layout active="1" order="4">Title</layout>
+        <layout order="4">Title</layout>
         <event-sheet order="2">LevelA_logic</event-sheet>
-        <event-sheet order="3">LevelB_logic</event-sheet>
+        <event-sheet active="1" order="3">LevelB_logic</event-sheet>
         <event-sheet order="5">Title</event-sheet>
     </open-tabs>
     <properties>
