@@ -572,12 +572,12 @@
                 </instance>
                 <instance type="bombon_azul_particle" uid="65">
                     <properties>
-                        <rate>20</rate>
+                        <rate>25</rate>
                         <spray-cone>360</spray-cone>
                         <type>One-shot</type>
                         <initial-particle-properties></initial-particle-properties>
                         <speed>150</speed>
-                        <size>11</size>
+                        <size>22</size>
                         <opacity>100</opacity>
                         <grow-rate>0</grow-rate>
                         <x-randomiser>30</x-randomiser>
@@ -586,13 +586,13 @@
                         <size-randomiser>10</size-randomiser>
                         <grow-rate-randomiser>0</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>
-                        <acceleration>-200</acceleration>
+                        <acceleration>-150</acceleration>
                         <gravity>0</gravity>
                         <angle-randomiser>0</angle-randomiser>
-                        <speed-randomiser>300</speed-randomiser>
+                        <speed-randomiser>100</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
                         <destroy-mode>Fade to invisible</destroy-mode>
-                        <timeout>0.3</timeout>
+                        <timeout>0.5</timeout>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1274,6 +1274,7 @@
                     <instance-variables>
                         <activeHover>1</activeHover>
                         <activeSound>1</activeSound>
+                        <line>A</line>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1319,8 +1320,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1109</x>
-                        <y>526</y>
+                        <x>778</x>
+                        <y>614</y>
                         <z>0</z>
                         <width>22</width>
                         <height>15</height>
@@ -1345,8 +1346,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1040</x>
-                        <y>510</y>
+                        <x>709</x>
+                        <y>598</y>
                         <z>0</z>
                         <width>25</width>
                         <height>16</height>
@@ -1371,8 +1372,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>992</x>
-                        <y>563</y>
+                        <x>661</x>
+                        <y>651</y>
                         <z>0</z>
                         <width>24</width>
                         <height>15</height>
@@ -1397,14 +1398,232 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1090</x>
-                        <y>584</y>
+                        <x>759</x>
+                        <y>672</y>
                         <z>0</z>
                         <width>22</width>
                         <height>15</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.533333361</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caja_conejos" uid="701">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <conejo>0</conejo>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseInQuad</function>
+                                <target>0,-200</target>
+                                <target-mode>Relative</target-mode>
+                                <duration>0.5</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>935</x>
+                        <y>602</y>
+                        <z>0</z>
+                        <width>204</width>
+                        <height>172</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505813956</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Conejo" uid="542">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activeHover>1</activeHover>
+                        <isOverlappingOut>0</isOverlappingOut>
+                        <caja_UID>0</caja_UID>
+                        <posicion_en_la_caja>1</posicion_en_la_caja>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseInQuad</function>
+                                <target>0,50</target>
+                                <target-mode>Relative</target-mode>
+                                <duration>0.5</duration>
+                                <enforce-mode>Compromise</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LiteTween2">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseInQuad</function>
+                                <target>100,100</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.5</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1069.221191406</x>
+                        <y>407.356781006</y>
+                        <z>0</z>
+                        <width>83.555915833</width>
+                        <height>108.131187439</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mark_arrow" uid="801">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <cajon>grey</cajon>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>1.4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>10</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>743</x>
+                        <y>170</y>
+                        <z>0</z>
+                        <width>28.094429016</width>
+                        <height>35.631958008</height>
+                        <depth>0</depth>
+                        <hotspotX>0.51219511</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="papel" uid="792">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <activeHover>1</activeHover>
+                        <timer>6</timer>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseInQuad</function>
+                                <target>100,100</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.2</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>413</x>
+                        <y>615</y>
+                        <z>0</z>
+                        <width>76</width>
+                        <height>112</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caja_conejos_6_llena" uid="802">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1155</x>
+                        <y>593</y>
+                        <z>0</z>
+                        <width>203</width>
+                        <height>192</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502463043</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -1,0 +1,1826 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_LevelA</name>
+    <events>
+        <include>_Main</include>
+        <include>_Level_Shared</include>
+        <variable constant="0" name="bombonFreqMax" sid="204963511510361" static="0" type="number">3</variable>
+        <variable constant="0" name="bombonRandom" sid="540100734676513" static="0" type="number">0</variable>
+        <variable constant="0" name="rafagaDelay" sid="485991908171893" static="0" type="number">10</variable>
+        <variable constant="0" name="rafagaDuration" sid="569382419196668" static="0" type="number">4</variable>
+        <variable constant="0" name="rafagaFreqMultiplier" sid="206616915773814" static="0" type="number">0.1</variable>
+        <variable constant="0" name="bombonColorSeparadoCounter" sid="853777490044002" static="0" type="number">0</variable>
+        <variable constant="0" name="bombonBrilloX" sid="320107547560348" static="0" type="number">0</variable>
+        <variable constant="0" name="bombonBrilloY" sid="155282553836017" static="0" type="number">0</variable>
+        <event-group description="" sid="709794526977027" title="Level Prog A">
+            <sub-events>
+                <event-block sid="951240569695830">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="711939257235666" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="810661790342746" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">currentLevel*5+55</param>
+                        </action>
+                        <action id="0" name="Call function" sid="340253737585458" type="Function">
+                            <param id="0" name="Name">&quot;setTimerText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="341862746526390" type="System">
+                            <param id="0" name="Variable">cintaSpeed</param>
+                            <param id="1" name="Value">(currentLevel-1)/20+1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="950484321637847" type="System">
+                            <param id="0" name="Variable">currentLine</param>
+                            <param id="1" name="Value">&quot;A&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="713224203361030" type="System">
+                            <param id="0" name="Variable">bombonColorSeparadoCounter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Levels</comment>
+                <event-block sid="582805182581452">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="920863055673964" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="885069574786491">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="203324003234633" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="880659423007307" type="System">
+                                    <param id="0" name="Variable">bombonFreqMin</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="110476584701352" type="System">
+                                    <param id="0" name="Variable">bombonFreqMax</param>
+                                    <param id="1" name="Value">2.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="519871357290850">
+                            <conditions>
+                                <condition id="0" name="On function" sid="558328688633772" type="Function">
+                                    <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="584642414905458" type="System">
+                                    <param id="0" name="Variable">bombonRandom</param>
+                                    <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="614547433285585">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="868563824372544" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="619262842230998">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="448613022506178" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="665962413460680" type="System">
+                                    <param id="0" name="Variable">bombonFreqMin</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="266788001894598" type="System">
+                                    <param id="0" name="Variable">bombonFreqMax</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="593126403278431">
+                            <conditions>
+                                <condition id="0" name="On function" sid="958472706029280" type="Function">
+                                    <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="313181741497602" type="System">
+                                    <param id="0" name="Variable">bombonRandom</param>
+                                    <param id="1" name="Value">choose(1,1,2,3,4,5,6,7,8,9)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="678002059320442">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="262008054334246" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="275587112169952">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="436367791236777" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="994963517128503" type="System">
+                                    <param id="0" name="Variable">bombonFreqMin</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="178587183352723" type="System">
+                                    <param id="0" name="Variable">bombonFreqMax</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="292262856938017">
+                            <conditions>
+                                <condition id="0" name="On function" sid="827629572202939" type="Function">
+                                    <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="481829757769208" type="System">
+                                    <param id="0" name="Variable">bombonRandom</param>
+                                    <param id="1" name="Value">choose(1,1,1,2,2,2,3,3,3,4,4,4,5,6,7,8,9,10,11)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="426873469841095">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="110878771970598" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="566843760666398">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="456013978089756" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="867912273955648" type="System">
+                                    <param id="0" name="Variable">cintaSpeed</param>
+                                    <param id="1" name="Value">cintaSpeed*1.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="590572608335284">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="972967278559078" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="933225658465462">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="820914488356478" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="329042686037437" type="System">
+                                    <param id="0" name="Variable">cintaSpeed</param>
+                                    <param id="1" name="Value">cintaSpeed*1.3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="894244303999580">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="827961230804164" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="347450875214453">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="692753488358568" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="742221428189719" type="System">
+                                    <param id="0" name="Variable">cintaSpeed</param>
+                                    <param id="1" name="Value">cintaSpeed*1.4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Destruir Boton Stop en niveles &lt; 9</comment>
+                <event-block sid="260639152248075">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="506284920826581" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="152454662804029">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="565225846338802" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="489924346555001" type="cinta_L">
+                                    <param id="0" name="Unique ID">358</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="899742861081220" type="blueText">
+                                    <param id="0" name="Unique ID">360</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="971085125742811" type="EmergencyStop" />
+                                <action id="-9" name="Destroy" sid="805194032765324" type="blueText" />
+                                <action id="-9" name="Destroy" sid="337314550065696" type="cinta_L" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="744879498747159" title="Button Play - Gestión de niveles - A">
+            <sub-events>
+                <comment>Button play</comment>
+                <event-block sid="467063187864280">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="437970292868167" type="Touch">
+                            <param id="0" name="Object">play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="317561361971412" type="Function">
+                            <param id="0" name="Name">&quot;startTransition&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="774648359117975" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="100484517330957">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="866233344795104" type="play">
+                                    <param id="0" name="Animation">&quot;Retry&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="388127747474890" type="System">
+                                    <param id="0" name="Layout">LevelA</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="174381249481685">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="370412828020236" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="176954589761718">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="847139705669624" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="419466095579249" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Value">currentLevel+1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="689807838287919">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="647116729149125" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="186378632718571" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="834878569831690" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="309982901999868" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="683763881962424" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="594220070635740" type="System">
+                                            <param id="0" name="Layout">Supervisora</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="604801342081948">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="981089615966363" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="479443742886580" type="System">
+                                            <param id="0" name="Layout">LevelA</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="407913071109948" title="Movimiento Cinta A">
+            <sub-events>
+                <event-block sid="739419260082631">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="180737643301964" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="445295972519150" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="615744067501573">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="706921923307120" type="BombonNormal">
+                                    <param id="0" name="Object">Cinta</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="878219777407928" type="BombonNormal" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="213333333864682" type="BombonNormal">
+                                    <param id="0" name="X">BombonNormal.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="682618858603542">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="657883343235283" type="BombonDefectuoso">
+                                    <param id="0" name="Object">Cinta</param>
+                                </condition>
+                                <condition behavior="DragDrop2" id="0" inverted="1" name="Is dragging" sid="734939815082740" type="BombonDefectuoso" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="911659360773344" type="BombonDefectuoso">
+                                    <param id="0" name="X">BombonDefectuoso.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="828367204131298">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="992975478238084" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="455386317586444" type="cinta_line_tiled">
+                                    <param id="0" name="X">cinta_line_tiled.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="453133742705721">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="554688931368061" type="System">
+                                    <param id="0" name="First value">cinta_line_tiled.X</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="919105824398737" type="cinta_line_tiled">
+                                    <param id="0" name="X">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="945660790955693" title="Spawn Bombones">
+            <sub-events>
+                <event-block sid="611510962643101">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="456739882660399" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="186997747802346" type="System">
+                            <param id="0" name="Variable">spawnOffsetY</param>
+                            <param id="1" name="Value">Spawn.Height*1.9</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="136780727769980">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="168960395405627" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="487638672561158">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="860091271482163" type="System">
+                                    <param id="0" name="Interval (seconds)">random(bombonFreqMin,BombonFreqMax)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="381229553459347" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="949435513346851" type="Function">
+                                    <param id="0" name="Name">&quot;setBombonRandom&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="970505680387240">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="759010471159574" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="759155683074290" type="System">
+                                            <param id="0" name="Object to create">bombon_azul</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="987965667556226">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="457730769977187" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="653911507773745" type="System">
+                                            <param id="0" name="Object to create">bombon_rojo</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="181950401544686">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="880142679787064" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="274716131070830" type="System">
+                                            <param id="0" name="Object to create">bombon_verde</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="914402151388437">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="783175804155384" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="101794369661553" type="System">
+                                            <param id="0" name="Object to create">bombon_amarillo</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="101116002042186">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="485137284428309" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="181981485320072" type="System">
+                                            <param id="0" name="Object to create">bombon_chocolate</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="418031934131559">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="806907594277362" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="119005231200464" type="System">
+                                            <param id="0" name="Object to create">bombon_azul_defectuoso</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="985729066181703">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="615020168170975" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="296312804879706" type="System">
+                                            <param id="0" name="Object to create">bombon_rojo_defectuoso</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="609478523679904">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="931824403606653" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="464810752840256" type="System">
+                                            <param id="0" name="Object to create">bombon_verde_defectuoso</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="942728560869830">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="237502591376909" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="596071096863352" type="System">
+                                            <param id="0" name="Object to create">bombon_amarillo_defectuoso</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="333518286982407">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="492164179771006" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="781591583200342" type="System">
+                                            <param id="0" name="Object to create">bombon_azul_brillo</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="817876951626429">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="558004807475645" type="System">
+                                            <param id="0" name="Variable">bombonRandom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">11</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="378857796863824" type="System">
+                                            <param id="0" name="Object to create">bombon_reloj</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Spawn.X</param>
+                                            <param id="3" name="Y">Spawn.Y+random(-spawnOffsetY,spawnOffsetY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Ráfaga</comment>
+                        <event-block sid="763541880046523">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="481671588810164" type="System">
+                                    <param id="0" name="Interval (seconds)">RafagaDelay</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="903751001455309" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="739510887575697" type="System">
+                                    <param id="0" name="Object to create">Sprite</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="X">77</param>
+                                    <param id="3" name="Y">252</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="734567207512910" type="System">
+                                    <param id="0" name="Variable">bombonFreqMin</param>
+                                    <param id="1" name="Value">bombonFreqMin * rafagaFreqMultiplier</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="387097071050761" type="System">
+                                    <param id="0" name="Variable">bombonFreqMax</param>
+                                    <param id="1" name="Value">bombonFreqMax * rafagaFreqMultiplier</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="797008639370755" type="System">
+                                    <param id="0" name="Seconds">RafagaDuration</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="148605115559108" type="System">
+                                    <param id="0" name="Variable">bombonFreqMin</param>
+                                    <param id="1" name="Value">bombonFreqMin / rafagaFreqMultiplier</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="822957886254957" type="System">
+                                    <param id="0" name="Variable">bombonFreqMax</param>
+                                    <param id="1" name="Value">bombonFreqMax / rafagaFreqMultiplier</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="780378371952963">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="959000748877359" type="Sprite" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="753918351905670" type="Sprite">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="224584001362520">
+                    <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="619540661330168" type="Sprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="556135122373163" type="Sprite" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="939417218148862" title="Drag Scale A">
+            <sub-events>
+                <event-block sid="320195372283884">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="957237076568801" type="BombonNormal" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="237937551296318" type="BombonNormal">
+                            <param id="0" name="Scale">1.3</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="993689028926480" type="BombonNormal" />
+                    </actions>
+                </event-block>
+                <event-block sid="771145969128792">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="825714832570937" type="BombonNormal" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="816428753819481" type="BombonNormal">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="965182842493149">
+                    <conditions>
+                        <condition behavior="DragDrop2" id="1" name="On drag start" sid="698550843267806" type="BombonDefectuoso" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="922465465341370" type="BombonDefectuoso">
+                            <param id="0" name="Scale">1.3</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="182222844588191" type="BombonDefectuoso" />
+                    </actions>
+                </event-block>
+                <event-block sid="202803129419449">
+                    <conditions>
+                        <condition behavior="DragDrop2" id="2" name="On drop" sid="435652590234734" type="BombonDefectuoso" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="537552498112510" type="BombonDefectuoso">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="740672648740072" title="Drag Marks">
+            <sub-events>
+                <comment>LVL1-3</comment>
+                <event-block sid="866910870351579">
+                    <conditions>
+                        <condition behavior="DragDrop2" id="0" name="Is dragging" sid="624046338922899" type="BombonDefectuoso" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="681727468598053" type="DefectuosoMark">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="881569398788238">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="830047853448525" type="mark_arrow">
+                                    <param id="0" name="Instance variable">cajon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;grey&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="324023090908256" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="220788374830867" type="mark_arrow">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="213627274558339">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="570860269780129" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="736535812512808" type="DefectuosoMark">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="262371171256988">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="685819092201545" type="mark_arrow">
+                                    <param id="0" name="Instance variable">cajon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;grey&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="566075915663811" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="161131912985662" type="mark_arrow">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>LVL2+</comment>
+                <event-block sid="654668090179721">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="455442402880124" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="773801955331435">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="629997378464018" type="bombon_azul" />
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="786740580347817" type="bombon_azul_brillo" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="247912058098591" type="BlueMark">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406431966505916">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="671518973976564" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="506850670585890" type="BlueMark">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>LVL4+</comment>
+                <event-block sid="436303525871729">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="568877371360520" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="425464590735721">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="707493894054719" type="bombon_rojo" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="609280018074923" type="RedMark">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="876152614186086">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="307271750018722" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="128102279505863" type="RedMark">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>LVL6+</comment>
+                <event-block sid="206969082376626">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="486781834549443" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="703784957324901">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="513702838766915" type="bombon_amarillo" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="906506101570750" type="YellowMark">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="808056549413169">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="241906973274478" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="608792186007261" type="YellowMark">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="145022571443061" title="Cajon Visible">
+            <sub-events>
+                <event-block sid="884481580920620">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="652999407556649" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="937192275898444">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="887749383633312" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="686304098140481" type="System">
+                                    <param id="0" name="Layer">&quot;cajonBlue&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="708564337992500">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="254327315550892" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="871892483632380" type="System">
+                                    <param id="0" name="Layer">&quot;cajonBlue&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="518785674763466">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="730020636892342" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="681657990087452" type="System">
+                                    <param id="0" name="Layer">&quot;cajonRed&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="971178462292835">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="242769561728020" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="429278880392466" type="System">
+                                    <param id="0" name="Layer">&quot;cajonRed&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="831970249032896">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="200918656938559" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="134703336967936" type="System">
+                                    <param id="0" name="Layer">&quot;cajonYellow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="888907958079930">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="515530839970586" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="803492619874209" type="System">
+                                    <param id="0" name="Layer">&quot;cajonYellow&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="901604307006504" title="Score Logic LV1">
+            <sub-events>
+                <comment>Destroy bombones al final de la cinta - Sumar y restar Puntajes</comment>
+                <event-block sid="827247221292317">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="175063041784357" type="BombonNormal">
+                            <param id="0" name="Object">Destroy</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="966602423404859" type="BombonNormal" />
+                        <condition id="-14" name="Compare variable" sid="891941596275499" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="614491448193528" type="BombonNormal" />
+                        <action id="-3" name="Create object" sid="648510889156134" type="System">
+                            <param id="0" name="Object to create">bombon_azul_particle</param>
+                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                            <param id="2" name="X">BombonNormal.X</param>
+                            <param id="3" name="Y">BombonNormal.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="370457843848187" type="Function">
+                            <param id="0" name="Name">&quot;correct&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="304056481382391" type="BombonNormal">
+                            <param id="0" name="Object">coin_plain</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="726943725321936" type="Function">
+                            <param id="0" name="Name">&quot;coin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-10" name="Add to" sid="793844127511303" type="System">
+                            <param id="0" name="Variable">entregadosCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="626171206763715" title="Score Logic LV2-3 (blue)">
+            <sub-events>
+                <comment>Destroy bombones al final de la cinta - Sumar y restar Puntajes</comment>
+                <event-block sid="284844179433390">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="944767339105322" type="BombonNormal">
+                            <param id="0" name="Object">Destroy</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="474950489605175" type="BombonNormal" />
+                        <condition id="-8" name="Compare two values" sid="243948459882886" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_azul.UID</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="789243293103492" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_azul_brillo.UID</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="270193192645796" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="108551802501345" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="135595517402720" type="BombonNormal" />
+                        <action id="-3" name="Create object" sid="536717536357796" type="System">
+                            <param id="0" name="Object to create">bombon_azul_particle</param>
+                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                            <param id="2" name="X">BombonNormal.X</param>
+                            <param id="3" name="Y">BombonNormal.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="566538061504982" type="Function">
+                            <param id="0" name="Name">&quot;correct&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="611438019406182" type="BombonNormal">
+                            <param id="0" name="Object">coin_plain</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="830672015890854" type="Function">
+                            <param id="0" name="Name">&quot;coin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-10" name="Add to" sid="793107846304501" type="System">
+                            <param id="0" name="Variable">entregadosCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="542877955427495">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="359184013948496" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="148752809807402">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="285507589585710" type="bombon_azul">
+                                    <param id="0" name="Object">Destroy</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="781193401253441" type="bombon_azul" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="706792983520209" type="bombon_azul" />
+                                <action id="0" name="Spawn another object" sid="212335071124191" type="bombon_azul">
+                                    <param id="0" name="Object">x_red</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="146413939966252" type="x_red">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="865965392057794">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="476053359317402" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="759522035661693" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="108376029962533" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="278614023622298">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="403075217789128" type="bombon_azul_brillo">
+                                    <param id="0" name="Object">Destroy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="650810762484284" type="bombon_azul_brillo" />
+                                <action id="0" name="Spawn another object" sid="107140152469075" type="bombon_azul_brillo">
+                                    <param id="0" name="Object">x_red</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="774877905181017" type="x_red">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="643904579875472">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="613006812646299" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="459143353118218" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="826279499052773" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Destroy bombones en cajones</comment>
+                        <event-block sid="214482137720387">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="140554034073223" type="bombon_azul">
+                                    <param id="0" name="Object">BlueTarget</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="721221645267966" type="bombon_azul" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="327760765783989" type="bombon_azul" />
+                                <action id="-10" name="Add to" sid="168930875516416" type="System">
+                                    <param id="0" name="Variable">bombonColorSeparadoCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="436858000547712" type="System">
+                                    <param id="0" name="Object to create">bombon_azul_particle</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">bombon_azul.X</param>
+                                    <param id="3" name="Y">bombon_azul.Y</param>
+                                </action>
+                                <action id="0" name="Call function" sid="742971309042872" type="Function">
+                                    <param id="0" name="Name">&quot;correct&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="764102839922650" type="bombon_azul">
+                                    <param id="0" name="Object">coin_plain</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="238610947348739" type="Function">
+                                    <param id="0" name="Name">&quot;coin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="328923614246291">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="156495629610032" type="bombon_azul_brillo">
+                                    <param id="0" name="Object">BlueTarget</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="719515718564514" type="bombon_azul_brillo" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="459052918005035" type="System">
+                                    <param id="0" name="Variable">bombonBrilloX</param>
+                                    <param id="1" name="Value">bombon_azul_brillo.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="169085206471987" type="System">
+                                    <param id="0" name="Variable">bombonBrilloY</param>
+                                    <param id="1" name="Value">bombon_azul_brillo.Y</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="507721205597802" type="System">
+                                    <param id="0" name="Variable">bombonColorSeparadoCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="467087900995867" type="bombon_azul_brillo" />
+                                <action id="0" name="Call function" sid="654705330369255" type="Function">
+                                    <param id="0" name="Name">&quot;bombonPremiado&quot;</param>
+                                    <param id="1" name="Parameter {n}">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="267041560341916" title="Score Logic LV4-5 (red)">
+            <sub-events>
+                <comment>Destroy bombones al final de la cinta - Sumar y restar Puntajes</comment>
+                <event-block sid="527273314709559">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="311825532973404" type="BombonNormal">
+                            <param id="0" name="Object">Destroy</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="799078385007941" type="BombonNormal" />
+                        <condition id="-8" name="Compare two values" sid="285963850578827" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_azul.UID</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="971030855308691" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_azul_brillo.UID</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="836164951178884" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_rojo.UID</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="401711351631869" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="139059614286260" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="466963522845649" type="BombonNormal" />
+                        <action id="-3" name="Create object" sid="942545803294236" type="System">
+                            <param id="0" name="Object to create">bombon_azul_particle</param>
+                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                            <param id="2" name="X">BombonNormal.X</param>
+                            <param id="3" name="Y">BombonNormal.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="207190842256258" type="Function">
+                            <param id="0" name="Name">&quot;correct&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="610184527199489" type="BombonNormal">
+                            <param id="0" name="Object">coin_plain</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="307629913835757" type="Function">
+                            <param id="0" name="Name">&quot;coin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-10" name="Add to" sid="361361812658709" type="System">
+                            <param id="0" name="Variable">entregadosCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="254675708898426">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="360121985061210" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="453621577453279">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="691721290776677" type="bombon_rojo">
+                                    <param id="0" name="Object">Destroy</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="655887812512115" type="bombon_rojo" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="237303638709661" type="bombon_rojo" />
+                                <action id="0" name="Spawn another object" sid="278216193465628" type="bombon_rojo">
+                                    <param id="0" name="Object">x_red</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="414859584869316" type="x_red">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="628293075299919">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="542968017991251" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="124100535515601" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="885300993153670" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Destroy bombones en cajones</comment>
+                        <event-block sid="640756885941843">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="263794334414165" type="bombon_rojo">
+                                    <param id="0" name="Object">RedTarget</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="743100294465940" type="bombon_rojo" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="442262474710114" type="bombon_rojo" />
+                                <action id="-10" name="Add to" sid="760905620213665" type="System">
+                                    <param id="0" name="Variable">bombonColorSeparadoCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="346099771968428" type="System">
+                                    <param id="0" name="Object to create">bombon_azul_particle</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">bombon_rojo.X</param>
+                                    <param id="3" name="Y">bombon_rojo.Y</param>
+                                </action>
+                                <action id="0" name="Call function" sid="425533134359735" type="Function">
+                                    <param id="0" name="Name">&quot;correct&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="334685857272253" type="bombon_rojo">
+                                    <param id="0" name="Object">coin_plain</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="808306290012199" type="Function">
+                                    <param id="0" name="Name">&quot;coin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="447505423737518" title="Score Logic LV6-12 (yellow)">
+            <sub-events>
+                <comment>Destroy bombones al final de la cinta - Sumar y restar Puntajes</comment>
+                <event-block sid="355938418231451">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="636446665083855" type="BombonNormal">
+                            <param id="0" name="Object">Destroy</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="334022819762855" type="BombonNormal" />
+                        <condition id="-8" name="Compare two values" sid="103639726435143" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_azul.UID</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="645771311138168" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_azul_brillo.UID</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="598922965408976" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_rojo.UID</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="707991336701588" type="System">
+                            <param id="0" name="First value">BombonNormal.UID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">bombon_amarillo.UID</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="339654728820471" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="951226478500936" type="BombonNormal" />
+                        <action id="-3" name="Create object" sid="717087805317463" type="System">
+                            <param id="0" name="Object to create">bombon_azul_particle</param>
+                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                            <param id="2" name="X">BombonNormal.X</param>
+                            <param id="3" name="Y">BombonNormal.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="821763354140796" type="Function">
+                            <param id="0" name="Name">&quot;correct&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="667888394996135" type="BombonNormal">
+                            <param id="0" name="Object">coin_plain</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="110410225250360" type="Function">
+                            <param id="0" name="Name">&quot;coin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-10" name="Add to" sid="853348236902356" type="System">
+                            <param id="0" name="Variable">entregadosCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="173582765037151">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="390918329161255" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="160090653970324">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="679605263266558" type="bombon_amarillo">
+                                    <param id="0" name="Object">Destroy</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="378505473557185" type="bombon_amarillo" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="435181516023007" type="bombon_amarillo" />
+                                <action id="0" name="Spawn another object" sid="618839178427615" type="bombon_amarillo">
+                                    <param id="0" name="Object">x_red</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="694055624635313" type="x_red">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="864048984792291">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="582250636630955" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="353729479451387" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="567909229151547" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Destroy bombones en cajones</comment>
+                        <event-block sid="961138898882164">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="230405819071013" type="bombon_amarillo">
+                                    <param id="0" name="Object">YellowTarget</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="703182959404017" type="bombon_amarillo" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="893500040388795" type="bombon_amarillo" />
+                                <action id="-10" name="Add to" sid="624713419246077" type="System">
+                                    <param id="0" name="Variable">bombonColorSeparadoCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="858815550324982" type="System">
+                                    <param id="0" name="Object to create">bombon_azul_particle</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">bombon_amarillo.X</param>
+                                    <param id="3" name="Y">bombon_amarillo.Y</param>
+                                </action>
+                                <action id="0" name="Call function" sid="103625977397776" type="Function">
+                                    <param id="0" name="Name">&quot;correct&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="178793555526422" type="bombon_amarillo">
+                                    <param id="0" name="Object">coin_plain</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="613580531201403" type="Function">
+                                    <param id="0" name="Name">&quot;coin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="226077168228368" title="Score Logic MAIN">
+            <sub-events>
+                <comment>Destroy bombones al final de la cinta - Sumar y restar Puntajes</comment>
+                <event-block sid="715818696709842">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="716464264280588" type="BombonDefectuoso">
+                            <param id="0" name="Object">Destroy</param>
+                        </condition>
+                        <condition behavior="DragDrop2" id="0" inverted="1" name="Is dragging" sid="490893658297218" type="BombonDefectuoso" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="731225378077345" type="BombonDefectuoso" />
+                        <action id="0" name="Spawn another object" sid="132689369893460" type="BombonDefectuoso">
+                            <param id="0" name="Object">x_red</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="449666130776137" type="x_red">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="595381844020351">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="760033545445969" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;stopped&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="739729734730484" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="215274489230218" type="Function">
+                                    <param id="0" name="Name">&quot;error&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Destroy bombones en cajones</comment>
+                <event-block sid="459450993990183">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="463887783060822" type="BombonDefectuoso">
+                            <param id="0" name="Object">DefectuosoTarget</param>
+                        </condition>
+                        <condition behavior="DragDrop2" id="0" inverted="1" name="Is dragging" sid="466012099251291" type="BombonDefectuoso" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="230585425661261" type="BombonDefectuoso" />
+                        <action id="-10" name="Add to" sid="199312579111942" type="System">
+                            <param id="0" name="Variable">defectuosoCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="598607710884642" type="System">
+                            <param id="0" name="Object to create">bombon_azul_particle</param>
+                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                            <param id="2" name="X">BombonDefectuoso.X</param>
+                            <param id="3" name="Y">BombonDefectuoso.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="923818867211513" type="Function">
+                            <param id="0" name="Name">&quot;correct&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="806578962736295" type="BombonDefectuoso">
+                            <param id="0" name="Object">coin_plain</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="811512366392255" type="Function">
+                            <param id="0" name="Name">&quot;coin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="536511979078650" title="Bombones en el piso">
+            <sub-events>
+                <variable constant="0" name="bombonPiso" sid="999957465453418" static="0" type="number">0</variable>
+                <variable constant="0" name="bombonPisoX" sid="586252841139098" static="0" type="number">0</variable>
+                <variable constant="0" name="bombonPisoY" sid="264419533325749" static="0" type="number">0</variable>
+                <event-block sid="186257365679488">
+                    <conditions>
+                        <condition id="0" name="On function" sid="702529528189961" type="Function">
+                            <param id="0" name="Name">&quot;bombonPiso&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="286315379078083" type="System">
+                            <param id="0" name="Variable">bombonPiso</param>
+                            <param id="1" name="Value">choose(1,2,3,4)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="746711025990844" type="System">
+                            <param id="0" name="Variable">bombonPisoX</param>
+                            <param id="1" name="Value">random(50,1100)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="255791163414010" type="System">
+                            <param id="0" name="Variable">bombonPisoY</param>
+                            <param id="1" name="Value">random(680,720)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="167707674171425">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="209238024549498" type="System">
+                                    <param id="0" name="Variable">bombonPiso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="475277752308035" type="System">
+                                    <param id="0" name="Object to create">UI_bombon_azul</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">bombonPisoX</param>
+                                    <param id="3" name="Y">bombonPisoY</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="980726952858726" type="UI_bombon_azul">
+                                    <param id="0" name="Scale">0.95</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="482870435049711" type="UI_bombon_azul">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="416056073684506">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="139265224950220" type="System">
+                                    <param id="0" name="Variable">bombonPiso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="171823598943703" type="System">
+                                    <param id="0" name="Object to create">UI_bombon_amarillo</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">bombonPisoX</param>
+                                    <param id="3" name="Y">bombonPisoY</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="903074003260703" type="UI_bombon_amarillo">
+                                    <param id="0" name="Scale">0.95</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="816106298227833" type="UI_bombon_amarillo">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="464103564611820">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="565612191585323" type="System">
+                                    <param id="0" name="Variable">bombonPiso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="882547956207895" type="System">
+                                    <param id="0" name="Object to create">UI_bombon_rojo</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">bombonPisoX</param>
+                                    <param id="3" name="Y">bombonPisoY</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="437165583705834" type="UI_bombon_rojo">
+                                    <param id="0" name="Scale">0.95</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="947936144398967" type="UI_bombon_rojo">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="604443702868080">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="351707542108826" type="System">
+                                    <param id="0" name="Variable">bombonPiso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="308601929007035" type="System">
+                                    <param id="0" name="Object to create">UI_bombon_verde</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">bombonPisoX</param>
+                                    <param id="3" name="Y">bombonPisoY</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="805536889273946" type="UI_bombon_verde">
+                                    <param id="0" name="Scale">0.95</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="340561127229922" type="UI_bombon_verde">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="260895663259251">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="583333271263370" type="System" />
+                        <condition id="-12" name="Repeat" sid="544170315532971" type="System">
+                            <param id="0" name="Count">random(1,5)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="640280644923343" type="Function">
+                            <param id="0" name="Name">&quot;bombonPiso&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

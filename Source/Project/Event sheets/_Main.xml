@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_Main</name>
+    <events>
+        <variable constant="0" name="transitionDuration" sid="384197111447144" static="0" type="number">1.5</variable>
+        <variable constant="0" name="isTransitioning" sid="223055637875256" static="0" type="number">0</variable>
+        <variable constant="0" name="googleFont" sid="373220329968732" static="0" type="text">https://fonts.googleapis.com/css2?family=Nunito</variable>
+        <comment>Font</comment>
+        <event-block sid="844777755603737">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="162070050256908" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="168478582918792" type="Texts">
+                    <param id="0" name="Family name">&quot;Nunito&quot;</param>
+                    <param id="1" name="CSS URL">googleFont</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Fullscreen</comment>
+        <event-block sid="855165382725985">
+            <conditions>
+                <condition id="17" name="On tap object" sid="966089025327049" type="Touch">
+                    <param id="0" name="Object">button_fullscreen</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="568763539807422">
+                    <conditions>
+                        <condition id="10" inverted="1" name="Is fullscreen" sid="151246311700627" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="750484027913642" type="Browser">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="218444752481713">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="775882335894060" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Cancel fullscreen" sid="294695218730270" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="642487600560575">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="984190585903806" type="Mouse">
+                    <param id="0" name="Object">button_fullscreen</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="820884001493688" type="button_fullscreen">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="482675602312579">
+            <conditions>
+                <condition id="-22" name="Else" sid="880134907899480" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="244100729876381" type="button_fullscreen">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Cursor Hover</comment>
+        <event-block sid="467729956293601">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="319649644556168" type="Mouse">
+                    <param id="0" name="Object">ButtonsHover</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="919751492677175" type="ButtonsHover">
+                    <param id="0" name="Instance variable">activeHover</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="930704571824791" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="135962021169958">
+            <conditions>
+                <condition id="-22" name="Else" sid="385291834658829" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="183981106291300" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Button Sound</comment>
+        <event-block sid="671370605026239">
+            <conditions>
+                <condition id="17" name="On tap object" sid="878833008110864" type="Touch">
+                    <param id="0" name="Object">ButtonSound</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="338391812557628" type="ButtonSound">
+                    <param id="0" name="Instance variable">activeSound</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="404751542147661" type="Audio">
+                    <param id="0" name="Audio file">system-notification-199277</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">volumeSfx-3</param>
+                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="137896743088065" title="Transition">
+            <sub-events>
+                <event-block sid="172407720964590">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="873818643033171" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="116545934603512" type="choco_square">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">1</param>
+                            <param id="2" name="Value">choose(-3000,3000)</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="191006826704240" type="choco_square">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">1</param>
+                            <param id="2" name="Value">choose(-1200,1200)</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="778537898085992" type="choco_square">
+                            <param id="0" name="Target is">2</param>
+                            <param id="1" name="Relativity">1</param>
+                            <param id="2" name="Value">random(-360,360)</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="365472470297950" type="choco_square">
+                            <param id="0" name="Duration">random(0.5,1.5)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="173642461535721">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="674808346195981" type="System">
+                                    <param id="0" name="Variable">firstScreen</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="507516428588487" type="choco_square">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="549015397859671" type="System">
+                                    <param id="0" name="Seconds">transitionDuration</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="687881190711207" type="choco_square">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="556016934464390">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="391584148080893" type="System">
+                                    <param id="0" name="Variable">firstScreen</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="752189262657740" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Play" sid="685281782056826" type="Audio">
+                                    <param id="0" name="Audio file">swoosh</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">volumeSfx</param>
+                                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="615250609116723">
+                    <conditions>
+                        <condition id="0" name="On function" sid="430973065851284" type="Function">
+                            <param id="0" name="Name">&quot;startTransition&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="443794532084226" type="Audio">
+                            <param id="0" name="Audio file">swoosh</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">volumeSfx</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action behavior="LiteTween2" id="11" name="Reverse" sid="173446179225889" type="choco_square">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="679791679242276" type="choco_square">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="384287808500664" type="System">
+                            <param id="0" name="Variable">isTransitioning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="527758795447218" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="269118366532359" type="System">
+                            <param id="0" name="Variable">isTransitioning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

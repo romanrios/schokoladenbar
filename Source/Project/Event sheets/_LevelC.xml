@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_LevelC</name>
+    <events>
+        <include>_Main</include>
+        <include>_Level_Shared</include>
+        <event-group description="" sid="824483620053075" title="Level Prog C">
+            <sub-events>
+                <event-block sid="571145857517042">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="943451596029251" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="832741769603104" type="System">
+                            <param id="0" name="Variable">currentLine</param>
+                            <param id="1" name="Value">&quot;C&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="571211587821461" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">60+(currentLevel-1)*10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="188492681830169" type="System">
+                            <param id="0" name="Variable">cintaSpeed</param>
+                            <param id="1" name="Value">1+(currentLevel-1)*0.3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="713201643185205" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">1.5-(currentLevel-1)*0.3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="969280484433384" type="Function">
+                            <param id="0" name="Name">&quot;setTimerText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Máquina Intermedia</comment>
+                        <event-block sid="896776169476443">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="673384540105716" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-34" name="Pick by evaluate" sid="270454113585341" type="System">
+                                    <param id="0" name="Object">cinta_line_tiled</param>
+                                    <param id="1" name="Expression">cinta_line_tiled.LayerName = &quot;Scenery_option2&quot;</param>
+                                </condition>
+                                <condition id="-34" name="Pick by evaluate" sid="915234386058176" type="System">
+                                    <param id="0" name="Object">Conejo</param>
+                                    <param id="1" name="Expression">Conejo.LayerName = &quot;Scenery_option2&quot;</param>
+                                </condition>
+                                <condition id="-34" name="Pick by evaluate" sid="590405950917326" type="System">
+                                    <param id="0" name="Object">cinta3</param>
+                                    <param id="1" name="Expression">cinta3.LayerName = &quot;Scenery_option2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="365840505920657" type="Cinta">
+                                    <param id="0" name="Unique ID">538</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="201216446471596" type="cinta_line_tiled" />
+                                <action id="-9" name="Destroy" sid="276622174264263" type="pallet" />
+                                <action id="-9" name="Destroy" sid="621464845322313" type="CajonFinal" />
+                                <action id="-9" name="Destroy" sid="969327481555434" type="Conejo" />
+                                <action id="-9" name="Destroy" sid="700307176029653" type="levelC_cintaDetalle4" />
+                                <action id="-9" name="Destroy" sid="789730050532755" type="cinta3" />
+                                <action id="-6" name="Set height" sid="441450668634190" type="Cinta">
+                                    <param id="0" name="Height">1486</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="643754470246786" type="Cinta">
+                                    <param id="0" name="X">643</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="683402417957964" type="Destroy">
+                                    <param id="0" name="X">1390</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Última Máquina</comment>
+                        <event-block sid="863538853379314">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="665765084374006" type="System" />
+                                <condition id="-34" name="Pick by evaluate" sid="417231875840598" type="System">
+                                    <param id="0" name="Object">cinta_line_tiled</param>
+                                    <param id="1" name="Expression">cinta_line_tiled.LayerName = &quot;Scenery_option1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="685035433647148" type="cinta_L">
+                                    <param id="0" name="Unique ID">522</param>
+                                </condition>
+                                <condition id="-34" name="Pick by evaluate" sid="320364752938383" type="System">
+                                    <param id="0" name="Object">cinta3</param>
+                                    <param id="1" name="Expression">cinta3.LayerName = &quot;Scenery_option1&quot;</param>
+                                </condition>
+                                <condition id="-34" name="Pick by evaluate" sid="871743605478934" type="System">
+                                    <param id="0" name="Object">cinta_engranaje</param>
+                                    <param id="1" name="Expression">cinta_engranaje.LayerName = &quot;Scenery_option1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="321511167074738" type="cinta_line_tiled" />
+                                <action id="-9" name="Destroy" sid="418549227510487" type="cinta_L" />
+                                <action id="-9" name="Destroy" sid="169283419438108" type="cinta3" />
+                                <action id="-9" name="Destroy" sid="580832042250212" type="cinta_engranaje" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="892688946862330">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="232241868372151" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="715582285407528" type="System">
+                                    <param id="0" name="Variable">cintaSpeed</param>
+                                    <param id="1" name="Value">0.3</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="401818541682107" type="System">
+                                    <param id="0" name="Variable">bombonFreqMin</param>
+                                    <param id="1" name="Value">0.25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="355951259233261">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="205403267990147" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="711756358844951" type="System">
+                                    <param id="0" name="Variable">cintaSpeed</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="374000560409773" type="System">
+                                    <param id="0" name="Variable">bombonFreqMin</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406064901645417">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="211216502766098" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="322671469149822" type="blueText">
+                                    <param id="0" name="Unique ID">703</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="892749497560228" type="cinta_L">
+                                    <param id="0" name="Unique ID">699</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="259605500051536" type="button_text">
+                                    <param id="0" name="Unique ID">709</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="684271620193235" type="EmergencyStop" />
+                                <action id="-9" name="Destroy" sid="814107994010416" type="blueText" />
+                                <action id="-9" name="Destroy" sid="896422422448051" type="cinta_L" />
+                                <action id="-9" name="Destroy" sid="868582188200540" type="button_text" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="157192951861105" title="Button Play - Gestión de niveles - C">
+            <sub-events>
+                <comment>Button play</comment>
+                <event-block sid="758456382420866">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="267752127477253" type="Touch">
+                            <param id="0" name="Object">play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="315205884540971" type="Function">
+                            <param id="0" name="Name">&quot;startTransition&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="523983676519613" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="901870635337482">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="100662881753942" type="play">
+                                    <param id="0" name="Animation">&quot;Retry&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="633024001552839" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="535618926378056">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="902442757798511" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="669823423741112">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="212137876391411" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="915302020145253" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Value">currentLevel+1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="127606294305937">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="219051548743471" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="668305933169611" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="167826521448847" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="270471466343168" type="System">
+                                            <param id="0" name="Layout">Supervisora</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="561683477374449">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="855374179608498" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="965533802079254" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="724738657392402" type="System">
+                                            <param id="0" name="Layout">Title</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="375890939936916" type="System">
+                                            <param id="0" name="Variable">titleCameraPosition</param>
+                                            <param id="1" name="Value">&quot;levelC&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="622152826813307">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="308421929864710" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="389340763886960" type="System">
+                                            <param id="0" name="Layout">LevelC</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="452506331090657" title="Movimiento Cinta C">
+            <sub-events>
+                <event-block sid="417300523004469">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="177465673294585" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="677917601215708">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="221500040569553" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;started&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="213413824978357" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="915052743212400">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="447618169071657" type="Cinta">
+                                            <param id="0" name="Unique ID">538</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="570178293289244" type="Conejo">
+                                            <param id="0" name="Object">Cinta</param>
+                                        </condition>
+                                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="137030337998731" type="Conejo" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="935898574809768" type="Conejo">
+                                            <param id="0" name="X">Conejo.X+cintaSpeed*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="826892721639933">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="701036718360298" type="cinta_line_tiled">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">360</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="421590467380044" type="cinta_line_tiled">
+                                            <param id="0" name="X">cinta_line_tiled.X+cintaSpeed*60*dt</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="913565052896543">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="626760857437260" type="System">
+                                                    <param id="0" name="First value">cinta_line_tiled.X</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">120</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="243060308691904" type="cinta_line_tiled">
+                                                    <param id="0" name="X">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="617581059094004">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="998583445155143" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;started&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="682883447797713" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="727309483752445" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;stopped&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="995257527383076">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="320350018082198" type="Cinta">
+                                            <param id="0" name="Unique ID">540</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="527237877820497" type="Conejo">
+                                            <param id="0" name="Object">Cinta</param>
+                                        </condition>
+                                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="724980133542295" type="Conejo" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="569237137237932" type="Conejo">
+                                            <param id="0" name="X">Conejo.X+cintaSpeed*60*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="673646607415551">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="143645076857325" type="cinta_line_tiled">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">360</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="768937323327259" type="cinta_line_tiled">
+                                            <param id="0" name="X">cinta_line_tiled.X+cintaSpeed*60*dt</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="394278454920606">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="513414156572423" type="System">
+                                                    <param id="0" name="First value">cinta_line_tiled.X</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">995</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="456057524333257" type="cinta_line_tiled">
+                                                    <param id="0" name="X">895</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="126967756581978" title="Circle Machine">
+            <sub-events>
+                <comment>Rotación</comment>
+                <event-block sid="926348111310690">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="742579213031241" type="papel">
+                            <param id="0" name="Object">circle_machine</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="3" inverted="1" name="Is enabled" sid="582008657501435" type="papel" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="815430572675242">
+                            <conditions>
+                                <condition id="-10" name="For" sid="831044555977312" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">6</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="758276039509540" type="hitbox_snap_conejo">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">circle_machine.ImagePointX(loopindex)</param>
+                                    <param id="2" name="Y">circle_machine.ImagePointY(loopindex)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="531392126357637" type="hitbox_snap_conejo">
+                                    <param id="0" name="Object">circle_machine</param>
+                                    <param id="1" name="Image point (optional)">loopindex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="121292999104312">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="578094864850101" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;started&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="650371856815225" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;stopped&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="601362756218660" type="System">
+                                    <param id="0" name="Variable">levelState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Rotate clockwise" sid="229123953075714" type="hitbox_snap_conejo">
+                                    <param id="0" name="Degrees">(25*cintaSpeed)*dt</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="579427667043979" type="circle_machine">
+                                    <param id="0" name="Degrees">(25*cintaSpeed)*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Snapping Conejos</comment>
+                <event-block sid="478684287538214">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="359865344560860" type="System">
+                            <param id="0" name="Object">hitbox_snap_conejo</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="889592945873918" type="Conejo">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="489597179031578" type="Conejo">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">hitbox_snap_conejo.X</param>
+                            <param id="2" name="Y">hitbox_snap_conejo.Y</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="999889708706605" type="Conejo">
+                            <param id="0" name="Object">hitbox_snap_conejo</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="316438598354985" type="Conejo" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="975053252597086" type="Conejo">
+                            <param id="0" name="Object">hitbox_snap_conejo</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="879184980484882" type="Conejo">
+                            <param id="0" name="Angle">hitbox_snap_conejo.Angle</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="777122471027932">
+                            <conditions>
+                                <condition behavior="DragDrop" id="3" name="Is enabled" sid="193275964255739" type="Conejo" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="615336879927272" type="Audio">
+                                    <param id="0" name="Audio file">item</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">volumeSfx-3</param>
+                                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="834457359298403" type="Conejo">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Conejo sale Envuelto</comment>
+                <event-block sid="627592255256911">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="134267341765779" type="Conejo">
+                            <param id="0" name="Object">hitbox_conejo_envolver</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="131455705856429" type="Conejo">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="3" inverted="1" name="Is enabled" sid="802972877324885" type="Conejo" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="681484257384525" type="Conejo">
+                            <param id="0" name="Object">hitbox_conejo_envolver</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="809858011696558" type="Conejo">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="453108483705247" type="Conejo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="889681045240644">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="280084676829245" type="papel">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="895051140071352" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Envuelto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="337054848292134">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="927961887818464" type="papel">
+                                    <param id="0" name="Animation">&quot;Color&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="233877240048713" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Envuelto2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>gasta papel</comment>
+                        <event-block sid="578583450717238">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="184633799234944" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="394374788241802" type="papel">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="622106242100707">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="329879259595913" type="papel">
+                                            <param id="0" name="Instance variable">timer</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="945899728033961" type="papel">
+                                            <param id="0" name="Object">Sprite</param>
+                                            <param id="1" name="Layer">&quot;Marks&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="448614285355054" type="papel" />
+                                        <action id="-3" name="Create object" sid="892973177154676" type="System">
+                                            <param id="0" name="Object to create">papel</param>
+                                            <param id="1" name="Layer">&quot;sobreBombones&quot;</param>
+                                            <param id="2" name="X">mesaDinos.X-300</param>
+                                            <param id="3" name="Y">mesaDinos.Y-100</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="592715552900816" type="papel">
+                                            <param id="0" name="Animation">choose(&quot;Default&quot;,&quot;Color&quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="810781553627222" type="papel">
+                                            <param id="0" name="Target is">0</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">mesaDinos.X</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="428054886626107" type="papel">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">mesaDinos.Y-100</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="155713214877840" type="papel">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="390790040898747" type="papel">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="221908377398744" type="porta_papel_2" />
+                                        <action id="2" name="Stop" sid="826903040699793" type="papel" />
+                                        <action behavior="Flash" id="0" name="Flash" sid="333393787601270" type="Sprite">
+                                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                                            <param id="2" name="Duration">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="240698802870000">
+                    <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="552819083573916" type="Sprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="142623341795812" type="Sprite" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="737595845242445" title="Papel">
+            <sub-events>
+                <event-block sid="959419814625458">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="475688093696193" type="papel" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="617024224331631">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="512626508449332" type="papel">
+                                    <param id="0" name="Object">porta_papel_</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="394388386538234" type="papel">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">porta_papel_2.X</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="167191994759694" type="papel">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">porta_papel_2.Y+43</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="926537593015072" type="papel">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="529366206689253" type="papel">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="422061816425893" type="porta_papel_2" />
+                                <action id="3" name="Start" sid="401250395425544" type="porta_papel_2">
+                                    <param id="0" name="From">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="717304931202637" type="Audio">
+                                    <param id="0" name="Audio file">item</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">volumeSfx-3</param>
+                                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                                </action>
+                                <action id="3" name="Start" sid="757248045619971" type="papel">
+                                    <param id="0" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="998001940150407">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="496906857862799" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="198094817504300" type="papel">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">mesaDinos.X-20</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="897358724316267" type="papel">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">mesaDinos.Y-100</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="555104190996260" type="papel">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="191566578487126">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="642097531737244" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="796830165982870" type="porta_papel_2" />
+                        <action id="4" name="Set animation" sid="613817986680553" type="papel">
+                            <param id="0" name="Animation">choose(&quot;Default&quot;,&quot;Color&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="2" name="Stop" sid="642638065710533" type="papel" />
+                        <action id="-16" name="Wait" sid="242832126418842" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="3" name="Start" sid="991444355452005" type="porta_papel_2">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action id="3" name="Start" sid="743107968591239" type="papel">
+                            <param id="0" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="C_spawn_counter" sid="784986843795902" static="0" type="number">0</variable>
+        <event-group description="" sid="116503780194477" title="Spawn Bombones C">
+            <sub-events>
+                <event-block sid="219719756749615">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="822949594475138" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="603816323883781" type="System">
+                            <param id="0" name="Variable">C_spawn_counter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="389216040909920">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="427968019696279" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="795251235111928">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="858536403020940" type="System">
+                                    <param id="0" name="Interval (seconds)">bombonFreqMin</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="405000115457001" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="974700106563952" type="System">
+                                    <param id="0" name="Variable">C_spawn_counter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="712374291454375">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="481404555725393" type="System">
+                                            <param id="0" name="Variable">C_spawn_counter</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="259276862686304">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="925164511895211" type="System">
+                                                    <param id="0" name="Object to create">Conejo</param>
+                                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                                    <param id="2" name="X">Spawn.X</param>
+                                                    <param id="3" name="Y">Spawn.Y+52</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="205606760041672">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="861084678021676" type="System">
+                                                            <param id="0" name="First value">random(0,1)</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">0.8</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="256637594288781" type="Conejo">
+                                                            <param id="0" name="Animation">&quot;Roto&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="139063449797258">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="807163069981418" type="System">
+                                                            <param id="0" name="Variable">currentLevel</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="669839272024059" type="System">
+                                                            <param id="0" name="First value">random(0,1)</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">0.7</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="741272662043566" type="Conejo" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="652650430379313">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="112143778412179" type="System">
+                                                    <param id="0" name="Object to create">Conejo</param>
+                                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                                    <param id="2" name="X">Spawn.X</param>
+                                                    <param id="3" name="Y">Spawn.Y-52</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="370907665712916">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="275745202298088" type="System">
+                                                            <param id="0" name="First value">random(0,1)</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">0.8</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="345866716315984" type="Conejo">
+                                                            <param id="0" name="Animation">&quot;Roto&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="279021926477066">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="160493335670265" type="System">
+                                                            <param id="0" name="Variable">currentLevel</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="679071929228916" type="System">
+                                                            <param id="0" name="First value">random(0,1)</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">0.7</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="697444315473471" type="Conejo" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="872359967550164">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="814571533837020" type="System">
+                                            <param id="0" name="Variable">C_spawn_counter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="200000205504227" type="System">
+                                            <param id="0" name="Variable">C_spawn_counter</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="207045957808614" title="Drag Scale C">
+            <sub-events>
+                <event-block sid="699362767344408">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="144162413492713" type="Conejo" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="288418115627401" type="Conejo">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="606978321635485" type="Conejo">
+                            <param id="0" name="Layer">&quot;sobreBombones&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="940052735207730">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="270815783409515" type="Conejo" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="900024425588699" type="Conejo">
+                            <param id="0" name="Scale">0.85</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="980466774856469" type="Conejo">
+                            <param id="0" name="Layer">&quot;bombones&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121998764566909">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="816222514563115" type="papel" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="996226991124726" type="papel">
+                            <param id="0" name="Scale">1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="582607833713242">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="341195337079671" type="papel" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="918628368966009" type="papel">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="549881326003862" title="Score Logic C">
+            <sub-events>
+                <comment>Destroy conejos al final de las cintas</comment>
+                <event-block sid="134158765890531">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="762615756978296" type="Conejo" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="976817719199189">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="240150787727256" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="337731844432406">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="453643434839859" type="Conejo">
+                                            <param id="0" name="Object">Destroy</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="381925525027558" type="Conejo" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="871689145370691">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="201128790569734" type="System">
+                                                    <param id="0" name="Variable">currentLevel</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="530494775185733" type="Conejo">
+                                                    <param id="0" name="Object">x_red</param>
+                                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action behavior="Flash" id="0" name="Flash" sid="593326925037114" type="x_red">
+                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                                    <param id="2" name="Duration">1.0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="397989952645623" type="Function">
+                                                    <param id="0" name="Name">&quot;error&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="108046435249154">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="308392194417908" type="Conejo">
+                                            <param id="0" name="Object">Destroy2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="966644319320515" type="Conejo">
+                                            <param id="0" name="Object">x_red</param>
+                                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="678742657359014" type="Conejo" />
+                                        <action behavior="Flash" id="0" name="Flash" sid="555251845856797" type="x_red">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="686712537338854" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Destroy conejo en cajón de defectuosos</comment>
+                        <event-block sid="814700745992172">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="600252327884542" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Roto&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="411388332620438">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="217713550165514" type="Conejo">
+                                            <param id="0" name="Object">Destroy</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="584612893525469" type="Conejo" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="937361344642024">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="509527610646769" type="System">
+                                                    <param id="0" name="Variable">currentLevel</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="866757921017722" type="Conejo">
+                                                    <param id="0" name="Object">bombon_azul_particle</param>
+                                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="719289711602911" type="Conejo">
+                                                    <param id="0" name="Object">coin_plain</param>
+                                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="944755345008192" type="Function">
+                                                    <param id="0" name="Name">&quot;coin&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="167245439914821" type="Function">
+                                                    <param id="0" name="Name">&quot;correct&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="644376643444941" type="System">
+                                                    <param id="0" name="Variable">defectuosoCounter</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="588183181348130">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="415783269991577" type="Conejo">
+                                            <param id="0" name="Object">Destroy2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="272826296298494" type="Conejo">
+                                            <param id="0" name="Object">x_red</param>
+                                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="142462343888742" type="Conejo" />
+                                        <action behavior="Flash" id="0" name="Flash" sid="972341215637524" type="x_red">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="632792101779059" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="960877096452607">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="547736947298549" type="Conejo">
+                            <param id="0" name="Object">Destroy2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="933684556919094">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="227597838923989" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Envuelto&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="892791303392747" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Envuelto2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="257797293246446" type="Conejo">
+                                    <param id="0" name="Object">coin_plain</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="622245661348122" type="Conejo">
+                                    <param id="0" name="Object">bombon_azul_particle</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="401969993447439" type="Conejo" />
+                                <action id="0" name="Call function" sid="581807654764243" type="Function">
+                                    <param id="0" name="Name">&quot;coin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="531234752883318" type="Function">
+                                    <param id="0" name="Name">&quot;correct&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Add to" sid="485228057071650" type="System">
+                                    <param id="0" name="Variable">entregadosCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="337273865216291">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="557338124913201" type="Conejo" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Destroy bombones fuera de la cinta</comment>
+                        <event-block sid="626484960893551">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="392768676988705" type="BombonTodos">
+                                    <param id="0" name="Unique ID">Conejo.UID</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="374655205356765" type="BombonTodos">
+                                    <param id="0" name="Object">Out</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="506517838653476" type="BombonTodos">
+                                    <param id="0" name="Layer">&quot;sobreBombones&quot;</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="694493074223174" type="BombonTodos">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="274661230288600" type="BombonTodos" />
+                                <action id="0" name="Spawn another object" sid="599510712384194" type="BombonTodos">
+                                    <param id="0" name="Object">x_red</param>
+                                    <param id="1" name="Layer">&quot;sobreBombones&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="673863319007233" type="x_red">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="217370062268113" type="Conejo">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="384905642729567">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="795629065257576" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="146675489048604" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="425756811966005" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="566287133667531">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="452616579152133" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Roto&quot;</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="785605247276704" type="Conejo">
+                                    <param id="0" name="Object">hitbox_snap_conejo</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="763858071990828">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="438030386508913" type="BombonTodos">
+                                            <param id="0" name="Unique ID">Conejo.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Move to layer" sid="119463344643156" type="BombonTodos">
+                                            <param id="0" name="Layer">&quot;sobreBombones&quot;</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="471088775869999" type="BombonTodos">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="861806394052309" type="BombonTodos" />
+                                        <action id="0" name="Spawn another object" sid="329232301550318" type="BombonTodos">
+                                            <param id="0" name="Object">x_red</param>
+                                            <param id="1" name="Layer">&quot;sobreBombones&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="898540552946719" type="x_red">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="655454160716449">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="125372761007709" type="System">
+                                                    <param id="0" name="Variable">levelState</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;stopped&quot;</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="929410592512721" type="System">
+                                                    <param id="0" name="Variable">levelState</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="538187919690217" type="Function">
+                                                    <param id="0" name="Name">&quot;error&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="899559628347820" title="Marks">
+            <sub-events>
+                <comment>drag start - create marks</comment>
+                <event-block sid="238898208461677">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="155422153797018" type="Conejo" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="467740762232665">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="889982016006741" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="793079461025533">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="419165630025906" type="System">
+                                            <param id="0" name="Object">hitbox_snap_conejo</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="998348534770272" type="System">
+                                            <param id="0" name="Object to create">mark_arrow</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">hitbox_snap_conejo.X</param>
+                                            <param id="3" name="Y">hitbox_snap_conejo.Y-25</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="278913292749067" type="mark_arrow">
+                                            <param id="0" name="Instance variable">cajon</param>
+                                            <param id="1" name="Value">str(hitbox_snap_conejo.UID)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="817319730119047">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="394747813001018" type="Conejo">
+                                    <param id="0" name="Animation">&quot;Roto&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="348101489078061" type="System">
+                                    <param id="0" name="Object to create">mark_arrow</param>
+                                    <param id="1" name="Layer">&quot;Marks&quot;</param>
+                                    <param id="2" name="X">CajonFinal.X</param>
+                                    <param id="3" name="Y">CajonFinal.Y-30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>drop - destroy marks</comment>
+                <event-block sid="974762624001381">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="336211086717125" type="Conejo" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="934612142243142" type="mark_arrow" />
+                    </actions>
+                </event-block>
+                <event-block sid="458386137485653">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="957642371099937" type="System">
+                            <param id="0" name="Object">mark_arrow</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="388190072911634" type="hitbox_snap_conejo">
+                            <param id="0" name="Unique ID">int(mark_arrow.cajon)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="192348120553642" type="mark_arrow">
+                            <param id="0" name="X">hitbox_snap_conejo.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="919671802773599" type="mark_arrow">
+                            <param id="0" name="Y">hitbox_snap_conejo.Y-25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822672692448826">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="542393368128215" type="papel" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="434531529107611" type="System">
+                            <param id="0" name="Object to create">mark_arrow</param>
+                            <param id="1" name="Layer">&quot;Marks&quot;</param>
+                            <param id="2" name="X">porta_papel_2.X</param>
+                            <param id="3" name="Y">porta_papel_2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="294934105210139">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="975821660394203" type="papel" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="652473984060305" type="mark_arrow" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

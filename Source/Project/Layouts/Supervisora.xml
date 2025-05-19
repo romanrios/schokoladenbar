@@ -2,7 +2,7 @@
 <c2layout>
     <name>Supervisora</name>
     <sid>185849461146764</sid>
-    <event-sheet>Supervisora</event-sheet>
+    <event-sheet>_Supervisora</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -229,6 +229,7 @@
                     <instance-variables>
                         <activeHover>1</activeHover>
                         <activeSound>1</activeSound>
+                        <line>A</line>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">

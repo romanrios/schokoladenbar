@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors>
@@ -235,6 +236,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="level" sid="672386140864479" type="number" />
+                    <instance-variable name="line" sid="209897175483497" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="199297138489042">
@@ -534,47 +536,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="button_bg2" sid="102599081329172">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="level" sid="323510662186906" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Sine" sid="198219741869428">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216600678560523" speed="5">
-                        <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\RomanPC\Desktop\Roman\Work\Nur Schokoladen\Recursos\button_bg.png">
-                            <collision-poly>
-                                <point x="0.0958905" y="0.0762192" />
-                                <point x="0.493151" y="0" />
-                                <point x="0.900685" y="0.0701216" />
-                                <point x="1" y="0.5" />
-                                <point x="0.890411" y="0.932927" />
-                                <point x="0.493151" y="0.987805" />
-                                <point x="0.0753425" y="0.929878" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="Supervisora" pingpong="0" repeatcount="1" repeatto="0" sid="842660352805146" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Schokoladenbar\boton.png">
-                            <collision-poly>
-                                <point x="0.0958905" y="0.0762192" />
-                                <point x="0.493151" y="0" />
-                                <point x="0.900685" y="0.0701216" />
-                                <point x="1" y="0.5" />
-                                <point x="0.890411" y="0.932927" />
-                                <point x="0.493151" y="0.987805" />
-                                <point x="0.0753425" y="0.929878" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="play" sid="129702627346450">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -652,8 +613,61 @@
             <object-type name="SliderBar_sfx" sid="434397298115772">
                 <plugin id="sliderbar" />
             </object-type>
+            <object-type name="extralife" sid="854903564834506">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="459829662170083">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314963459229790" speed="5">
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.509615" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Schokoladenbar\extralife.png">
+                            <collision-poly>
+                                <point x="0.0454545" y="0.038835" />
+                                <point x="0.5" y="0.00970874" />
+                                <point x="0.977273" y="0.0194175" />
+                                <point x="1" y="0.495146" />
+                                <point x="0.954545" y="0.961165" />
+                                <point x="0.5" y="0.990291" />
+                                <point x="0.0340909" y="0.970874" />
+                                <point x="0.0113636" y="0.495146" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="choco_square" sid="821058669434603">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="783887481336001">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween2" sid="242790413492739">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="413651960162452" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Schokoladenbar\choco_square.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="notepad" sid="888144336287211">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="155511924691932">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326436501667964" speed="5">
+                        <frame duration="1" hotspotX="0.5125" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Schokoladenbar\notepad.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder name="Level_scenario">
+        <object-folder name="Level_scenery">
             <object-type name="level_background" sid="463334214466806">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -863,18 +877,18 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="945855327252119" speed="5">
-                        <frame duration="1" hotspotX="0.500477" hotspotY="0.5" original-source="C:\Users\RomanPC\Desktop\Roman\Work\Nur Schokoladen\Recursos\cinta2.png">
+                        <frame duration="1" hotspotX="0.6" hotspotY="0.502222" original-source="C:\Users\Usuario\Desktop\cinta.png">
                             <collision-poly>
-                                <point x="0.000953289" y="0" />
+                                <point x="0" y="0" />
                                 <point x="1" y="0" />
                                 <point x="1" y="0.955752" />
-                                <point x="0.000953289" y="0.995575" />
+                                <point x="0" y="0.995575" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="linea2_isometric" sid="537828890423774">
+            <object-type name="isometric_lineaB" sid="537828890423774">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114973087423096" speed="5">
@@ -992,7 +1006,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite2" sid="252756258813328">
+            <object-type name="isometric_lineaA" sid="252756258813328">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="136606960352286" speed="5">
@@ -1146,6 +1160,9 @@
             </object-type>
             <object-type name="Trophy" sid="297980373609030">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="line" sid="966870252819222" type="string" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="226184892489078">
                         <behavior id="Sin" />
@@ -1202,6 +1219,130 @@
                                 <point x="0.5" y="0.96875" />
                                 <point x="0.27832" y="0.72168" />
                                 <point x="0.325195" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="circle_machine" sid="846913828751908">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="477009151746893" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\circle_machine.png">
+                            <image-point name="Imagepoint 1" x="0.558201" y="0.153439" />
+                            <image-point name="Imagepoint 2" x="0.830688" y="0.378307" />
+                            <image-point name="Imagepoint 3" x="0.769841" y="0.724868" />
+                            <image-point name="Imagepoint 4" x="0.439153" y="0.846561" />
+                            <image-point name="Imagepoint 5" x="0.171958" y="0.621693" />
+                            <image-point name="Imagepoint 6" x="0.230159" y="0.275132" />
+                            <collision-poly>
+                                <point x="0.148148" y="0.148148" />
+                                <point x="0.5" y="0.0026455" />
+                                <point x="0.851852" y="0.148148" />
+                                <point x="0.997355" y="0.5" />
+                                <point x="0.851852" y="0.851852" />
+                                <point x="0.5" y="0.997355" />
+                                <point x="0.148148" y="0.851852" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="dot" sid="202545179174054">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="862277873759369" speed="5">
+                        <frame duration="1" hotspotX="0.571429" hotspotY="0.571429" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA B\recursos\factory_isometric\1x\dot.png">
+                            <collision-poly>
+                                <point x="0.142857" y="0.142857" />
+                                <point x="0.428571" y="0" />
+                                <point x="0.857143" y="0.142857" />
+                                <point x="1" y="0.428571" />
+                                <point x="0.857143" y="0.857143" />
+                                <point x="0.428571" y="1" />
+                                <point x="0.142857" y="0.857143" />
+                                <point x="0" y="0.428571" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="isometric_lineaC" sid="281821744582878">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="110654221025678" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501805" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA B\recursos\factory_isometric\1x\Recurso 3.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="levelC_cintaDetalle" sid="283788463070257">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="765766945051032" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\levelC_cintaDetalle.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.496454" y="0" />
+                                <point x="0.93617" y="0.0401786" />
+                                <point x="1" y="0.5" />
+                                <point x="0.93617" y="0.959821" />
+                                <point x="0.496454" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="levelC_cintaDetalle2" sid="311813771449590">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="295349711228327" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\levelC_cintaDetalle.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.496454" y="0" />
+                                <point x="0.93617" y="0.0401786" />
+                                <point x="1" y="0.5" />
+                                <point x="0.93617" y="0.959821" />
+                                <point x="0.496454" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="levelC_cintaDetalle3" sid="160302075550086">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="141628024719106" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\levelC_cintaDetalle.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.496454" y="0" />
+                                <point x="0.93617" y="0.0401786" />
+                                <point x="1" y="0.5" />
+                                <point x="0.93617" y="0.959821" />
+                                <point x="0.496454" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="levelC_cintaDetalle4" sid="268619913960567">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672225258280840" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\aa.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.496454" y="0" />
+                                <point x="0.93617" y="0.0401786" />
+                                <point x="1" y="0.5" />
+                                <point x="0.93617" y="0.959821" />
+                                <point x="0.496454" y="1" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1392,6 +1533,30 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="829219478023029" speed="5">
                         <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hitbox_snap_conejo" sid="574108172174033">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="943244090476127" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Destroy2" sid="313629808303888">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="584327112980361" speed="5">
+                        <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hitbox_conejo_envolver" sid="233948041440805">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218483839745999" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1932,6 +2097,181 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Conejo" sid="847362469166598">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="caja_UID" sid="329734938715476" type="number" />
+                    <instance-variable name="posicion_en_la_caja" sid="671503669361231" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="100045692740012">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween2" sid="575564921975518">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246068051761202" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\conejo_chocolate.png">
+                            <collision-poly>
+                                <point x="0.171569" y="0" />
+                                <point x="0.735295" y="0" />
+                                <point x="1" y="0.458333" />
+                                <point x="0.916667" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.632576" />
+                                <point x="0.161765" y="0.443181" />
+                                <point x="0" y="0.162879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Envuelto" pingpong="0" repeatcount="1" repeatto="0" sid="635834157405143" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\conejo_envuelto.png">
+                            <collision-poly>
+                                <point x="0.171569" y="0" />
+                                <point x="0.735295" y="0" />
+                                <point x="1" y="0.458333" />
+                                <point x="0.916667" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.632576" />
+                                <point x="0.161765" y="0.443181" />
+                                <point x="0" y="0.162879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Envuelto2" pingpong="0" repeatcount="1" repeatto="0" sid="238236855992713" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman\Estudio\Game Dev\Schokoladenbar\LINEA C\conejo_envuelto_2.png">
+                            <collision-poly>
+                                <point x="0.171569" y="0" />
+                                <point x="0.735295" y="0" />
+                                <point x="1" y="0.458333" />
+                                <point x="0.916667" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.632576" />
+                                <point x="0.161765" y="0.443181" />
+                                <point x="0" y="0.162879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Cintita" pingpong="0" repeatcount="1" repeatto="0" sid="205616570634424" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\conejo_cintita.png">
+                            <collision-poly>
+                                <point x="0.171569" y="0" />
+                                <point x="0.735295" y="0" />
+                                <point x="1" y="0.458333" />
+                                <point x="0.916667" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.632576" />
+                                <point x="0.161765" y="0.443181" />
+                                <point x="0" y="0.162879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Cintita2" pingpong="0" repeatcount="1" repeatto="0" sid="525689737454017" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman\Estudio\Game Dev\Schokoladenbar\LINEA C\conejo_cintita_2.png">
+                            <collision-poly>
+                                <point x="0.171569" y="0" />
+                                <point x="0.735295" y="0" />
+                                <point x="1" y="0.458333" />
+                                <point x="0.916667" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.632576" />
+                                <point x="0.161765" y="0.443181" />
+                                <point x="0" y="0.162879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Defectuoso" pingpong="0" repeatcount="1" repeatto="0" sid="749090720395302" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\conejo_defectuoso.png">
+                            <collision-poly>
+                                <point x="0.171569" y="0" />
+                                <point x="0.735295" y="0" />
+                                <point x="1" y="0.458333" />
+                                <point x="0.916667" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.632576" />
+                                <point x="0.161765" y="0.443181" />
+                                <point x="0" y="0.162879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Roto" pingpong="0" repeatcount="1" repeatto="0" sid="598791239289736" speed="5">
+                        <frame duration="1" hotspotX="0.504854" hotspotY="0.503759" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\conejo_roto.png">
+                            <collision-poly>
+                                <point x="0.171569" y="0" />
+                                <point x="0.735295" y="0" />
+                                <point x="1" y="0.458333" />
+                                <point x="0.916667" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.632576" />
+                                <point x="0.161765" y="0.443181" />
+                                <point x="0" y="0.162879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cintita" sid="392190745681646">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="318973984748581">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="287174398368700">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565008263065944" speed="5">
+                        <frame duration="1" hotspotX="0.525" hotspotY="0.491228" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\cintita.png">
+                            <collision-poly>
+                                <point x="0.843408" y="0" />
+                                <point x="1" y="0.190351" />
+                                <point x="1" y="1" />
+                                <point x="0.132125" y="1" />
+                                <point x="0" y="0.82617" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="caja_conejos" sid="547394672625445">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="conejo" sid="648718304706564" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="736980960988971">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="639886952851416">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493397329504790" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505814" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\caja_conejos_6.png">
+                            <image-point name="Imagepoint 1" x="0.235294" y="0.186047" />
+                            <image-point name="Imagepoint 2" x="0.514706" y="0.186047" />
+                            <image-point name="Imagepoint 3" x="0.794118" y="0.186047" />
+                            <image-point name="Imagepoint 5" x="0.235294" y="0.354651" />
+                            <image-point name="Imagepoint 6" x="0.514706" y="0.354651" />
+                            <image-point name="Imagepoint 7" x="0.794118" y="0.354651" />
+                            <image-point name="Imagepoint 9" x="0.235294" y="0.523256" />
+                            <image-point name="Imagepoint 10" x="0.514706" y="0.523256" />
+                            <image-point name="Imagepoint 11" x="0.794118" y="0.523256" />
+                            <collision-poly>
+                                <point x="0.00490196" y="0.00581395" />
+                                <point x="0.995098" y="0.00581395" />
+                                <point x="0.995098" y="0.994186" />
+                                <point x="0.00490196" y="0.994186" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Browser" sid="325063679482761">
             <plugin id="Browser" />
@@ -1951,58 +2291,114 @@
         <object-type name="LocalStorage" sid="616775699596435">
             <plugin id="LocalStorage" />
         </object-type>
-        <object-type name="notepad" sid="888144336287211">
+        <object-type name="papel" sid="273547219066015">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="timer" sid="383225539093566" type="number" />
+            </instance-variables>
             <behaviors>
-                <behavior-type name="Anchor" sid="155511924691932">
-                    <behavior id="Anchor" />
+                <behavior-type name="DragDrop" sid="417019325969214">
+                    <behavior id="DragnDrop" />
                 </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326436501667964" speed="5">
-                    <frame duration="1" hotspotX="0.5125" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Schokoladenbar\notepad.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="choco_square" sid="821058669434603">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="LiteTween" sid="783887481336001">
-                    <behavior id="lunarray_LiteTween" />
-                </behavior-type>
-                <behavior-type name="LiteTween2" sid="242790413492739">
+                <behavior-type name="LiteTween" sid="754687287314774">
                     <behavior id="lunarray_LiteTween" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="413651960162452" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Schokoladenbar\choco_square.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="extralife" sid="854903564834506">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="459829662170083">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314963459229790" speed="5">
-                    <frame duration="1" hotspotX="0.505882" hotspotY="0.509615" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Schokoladenbar\extralife.png">
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="721212285517246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\papel1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\papel2.png">
                         <collision-poly>
-                            <point x="0.0454545" y="0.038835" />
-                            <point x="0.5" y="0.00970874" />
-                            <point x="0.977273" y="0.0194175" />
-                            <point x="1" y="0.495146" />
-                            <point x="0.954545" y="0.961165" />
-                            <point x="0.5" y="0.990291" />
-                            <point x="0.0340909" y="0.970874" />
-                            <point x="0.0113636" y="0.495146" />
+                            <point x="0.105263" y="0.0714286" />
+                            <point x="0.5" y="0" />
+                            <point x="0.894737" y="0.0714286" />
+                            <point x="1" y="0.5" />
+                            <point x="0.894737" y="0.928571" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0921053" y="0.9375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\papel3.png">
+                        <collision-poly>
+                            <point x="0.105263" y="0.0714286" />
+                            <point x="0.5" y="0" />
+                            <point x="0.894737" y="0.0714286" />
+                            <point x="1" y="0.5" />
+                            <point x="0.894737" y="0.928571" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0921053" y="0.9375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="Color" pingpong="1" repeatcount="1" repeatto="0" sid="580963634808924" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman\Estudio\Game Dev\Schokoladenbar\LINEA C\papel_color1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman\Estudio\Game Dev\Schokoladenbar\LINEA C\papel_color2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman\Estudio\Game Dev\Schokoladenbar\LINEA C\papel_color3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="porta_papel_" sid="137508261256687">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244144361497012" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\porta_papel_1.png">
+                        <collision-poly>
+                            <point x="0.0178571" y="0.0347826" />
+                            <point x="0.5" y="0.00869565" />
+                            <point x="0.982143" y="0.0347826" />
+                            <point x="0.995536" y="0.495652" />
+                            <point x="0.857143" y="0.721739" />
+                            <point x="0.5" y="0.913043" />
+                            <point x="0.120536" y="0.765217" />
+                            <point x="0.00446429" y="0.495652" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="porta_papel_2" sid="789321706379205">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381052512717915" speed="7">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.513514" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\porta_papel_a6.png" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.513514" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\porta_papel_a5.png" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.513514" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\porta_papel_a4.png" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.513514" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\porta_papel_a3.png" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.513514" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\porta_papel_a2.png" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.513514" original-source="C:\Users\Usuario\Desktop\Roman Diseño\Estudio\Game Dev\Schokoladenbar\LINEA C\porta_papel_a1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="entrada_conejo" sid="163291936667064">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371274510174905" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman\Estudio\Game Dev\Schokoladenbar\LINEA C\entrada_conejo.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.992308" y="0.00793651" />
+                            <point x="0.992308" y="0.5" />
+                            <point x="0.946154" y="0.944444" />
+                            <point x="0.5" y="0.992063" />
+                            <point x="0.0538462" y="0.944444" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="caja_conejos_6_llena" sid="431574426582657">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604573565810319" speed="5">
+                    <frame duration="1" hotspotX="0.502463" hotspotY="0.5" original-source="C:\Users\Usuario\Desktop\Roman\Estudio\Game Dev\Schokoladenbar\LINEA C\caja_conejos_6_llena2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProgressBar" sid="606620915305575">
+            <plugin id="progressbar" />
         </object-type>
     </object-folder>
     <families>
@@ -2036,14 +2432,16 @@
                 <member>bombon_verde_defectuoso</member>
                 <member>button_back</member>
                 <member>button_bg</member>
-                <member>button_bg2</member>
                 <member>button_fullscreen</member>
+                <member>cintita</member>
+                <member>Conejo</member>
                 <member>dino</member>
                 <member>dinoBroken</member>
                 <member>dinoDrag</member>
                 <member>EmergencyStop</member>
                 <member>extralife</member>
                 <member>notepad</member>
+                <member>papel</member>
                 <member>pause</member>
                 <member>play</member>
                 <member>textContainer</member>
@@ -2072,7 +2470,6 @@
             <members>
                 <member>button_back</member>
                 <member>button_bg</member>
-                <member>button_bg2</member>
                 <member>button_fullscreen</member>
                 <member>notepad</member>
                 <member>pause</member>
@@ -2113,6 +2510,7 @@
                 <member>bombon_rojo_defectuoso</member>
                 <member>bombon_verde</member>
                 <member>bombon_verde_defectuoso</member>
+                <member>Conejo</member>
                 <member>dinoBroken</member>
                 <member>dinoDrag</member>
             </members>
@@ -2179,16 +2577,18 @@
         <layout>Supervisora.xml</layout>
         <layout>LevelA.xml</layout>
         <layout>LevelB.xml</layout>
+        <layout>LevelC.xml</layout>
+        <layout>LevelC2.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>LevelA_logic.xml</event-sheet>
-        <event-sheet>Supervisora.xml</event-sheet>
-        <event-sheet>Title.xml</event-sheet>
-        <event-sheet>Main.xml</event-sheet>
-        <event-sheet>LevelA_progression.xml</event-sheet>
-        <event-sheet>Zoom(unused).xml</event-sheet>
-        <event-sheet>LevelB_logic.xml</event-sheet>
-        <event-sheet>LevelB_progression.xml</event-sheet>
+        <event-sheet>_LevelA.xml</event-sheet>
+        <event-sheet>_Supervisora.xml</event-sheet>
+        <event-sheet>_Title.xml</event-sheet>
+        <event-sheet>_Main.xml</event-sheet>
+        <event-sheet>_LevelB.xml</event-sheet>
+        <event-sheet>_LevelC.xml</event-sheet>
+        <event-sheet>_Level_Shared.xml</event-sheet>
+        <event-sheet>_LevelC2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Browser" uid="2" />
@@ -2246,12 +2646,14 @@
         <file name="swoosh.ogg" />
     </sounds-folder>
     <music-folder>
-        <file name="jazzy-baby-217433.m4a" />
-        <file name="jazzy-baby-217433.ogg" />
-        <file name="funny-accompanying-background-music-for-video-vlogs-one-day-baby-154587.m4a" />
-        <file name="funny-accompanying-background-music-for-video-vlogs-one-day-baby-154587.ogg" />
-        <file name="3-let-it-be-coffee-lofi-cafe-upbeat-254422.m4a" />
-        <file name="3-let-it-be-coffee-lofi-cafe-upbeat-254422.ogg" />
+        <file name="song_line_a.m4a" />
+        <file name="song_line_a.ogg" />
+        <file name="song_title.m4a" />
+        <file name="song_title.ogg" />
+        <file name="song_line_b.m4a" />
+        <file name="song_line_b.ogg" />
+        <file name="song_line_c.m4a" />
+        <file name="song_line_c.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

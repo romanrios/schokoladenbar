@@ -1,0 +1,1921 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_LevelB</name>
+    <events>
+        <include>_Main</include>
+        <include>_Level_Shared</include>
+        <variable constant="0" name="actualLevelState" sid="757806704796688" static="0" type="text">started</variable>
+        <variable constant="0" name="dinoMesaCounter" sid="473143584597066" static="0" type="number">4</variable>
+        <variable constant="0" name="dinoMesaCounterA" sid="121783485814143" static="0" type="number">2</variable>
+        <variable constant="0" name="maquinaLoca" sid="538806502449426" static="0" type="number">0</variable>
+        <event-group description="" sid="144009029335745" title="Level Prog B">
+            <sub-events>
+                <event-block sid="520800745872809">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="891819254020315" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="947083660854319" type="System">
+                            <param id="0" name="Variable">timer</param>
+                            <param id="1" name="Value">currentLevel*5+55</param>
+                        </action>
+                        <action id="0" name="Call function" sid="507649198596395" type="Function">
+                            <param id="0" name="Name">&quot;setTimerText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="256087973407504" type="System">
+                            <param id="0" name="Variable">cintaSpeed</param>
+                            <param id="1" name="Value">(currentLevel-1)/20+1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="834301280746192" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">(currentLevel-1)/20+3.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="815513907769125" type="System">
+                            <param id="0" name="Variable">currentLine</param>
+                            <param id="1" name="Value">&quot;B&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="857948892393789" type="System">
+                            <param id="0" name="Variable">dinoMesaCounter</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="158957083885832" type="System">
+                            <param id="0" name="Variable">dinoMesaCounterA</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="449541762519003" type="System">
+                            <param id="0" name="Variable">maquinaLoca</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>ocultar elementos</comment>
+                        <event-block sid="991539365180040">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="877201349556630" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="764643425119465" type="dinoDrag" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="152089902654774">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="436014470868273" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="396791102534763" type="redContainer" />
+                                <action id="-9" name="Destroy" sid="539213919758816" type="dinoBroken" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="238762436684819">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="468730272149891" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="267286751182982" type="cinta_L">
+                                    <param id="0" name="Unique ID">339</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="350240876180454" type="EmergencyStop" />
+                                <action id="-9" name="Destroy" sid="502640527948163" type="blueText" />
+                                <action id="-9" name="Destroy" sid="252941202015653" type="cinta_L" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="987864404160621">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="353888092862406" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="418753749510213">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="585710979239364" type="dinoDrag">
+                                            <param id="0" name="Unique ID">335</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="683710197676258" type="dinoDrag">
+                                            <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="410538593817564">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="481108845577024" type="dinoDrag">
+                                            <param id="0" name="Unique ID">341</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="309979129317450" type="dinoDrag">
+                                            <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="603061528083533" title="Button Play - gestión de niveles">
+            <sub-events>
+                <comment>Button play</comment>
+                <event-block sid="606726633722307">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="971223940531259" type="Touch">
+                            <param id="0" name="Object">play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="567550161596087" type="Function">
+                            <param id="0" name="Name">&quot;startTransition&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="417258628194299" type="System">
+                            <param id="0" name="Seconds">transitionDuration</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="238889301411919">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="422374647007953" type="play">
+                                    <param id="0" name="Animation">&quot;Retry&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="636033637484520" type="System">
+                                    <param id="0" name="Layout">LevelB</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="901454213725169">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="994490678737872" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="964040948281627">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="980429536931180" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="364388449142684" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Value">currentLevel+1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="646372201355961">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="420574212161686" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="561438514835425" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="156547945529806" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="888610216436434" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="443306672683980" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="386189538105738" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="971063558885188" type="System">
+                                            <param id="0" name="Layout">Supervisora</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="224375530635679">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="702918515647244" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="261240732865431" type="System">
+                                            <param id="0" name="Layout">LevelB</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="633943927240293" title="Movimiento Cinta B">
+            <sub-events>
+                <comment>Movimiento de la cinta</comment>
+                <event-block any="1" sid="707535319798762">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="654649057200092" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="397321081201014" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="330442122727147">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="454665808116969" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="795228035114065" type="cinta_line_tiled">
+                                    <param id="0" name="X">cinta_line_tiled.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="127776296797390">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="374523735164745" type="System">
+                                    <param id="0" name="First value">cinta_line_tiled.X</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="689698597971732" type="cinta_line_tiled">
+                                    <param id="0" name="X">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Avanza Dino</comment>
+                        <event-block sid="730238224109571">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="742720079731184" type="dino">
+                                    <param id="0" name="Object">Cinta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="483482804714264" type="dino">
+                                    <param id="0" name="X">dino.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="363449435819405">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="600478066570800" type="bombon_reloj">
+                                    <param id="0" name="Object">Cinta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="761766172008896" type="bombon_reloj">
+                                    <param id="0" name="X">bombon_reloj.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="152657553844861">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="199763178201264" type="bombon_azul_brillo">
+                                    <param id="0" name="Object">Cinta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="602284318701165" type="bombon_azul_brillo">
+                                    <param id="0" name="X">bombon_azul_brillo.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="741499906632468">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="385232449437392" type="dinoDrag">
+                                    <param id="0" name="Object">Cinta</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="606860572980774" type="dinoDrag" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="799961013752715" type="dinoDrag">
+                                    <param id="0" name="X">dinoDrag.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="335013571512333">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="183509485052367" type="dinoBroken">
+                                    <param id="0" name="Object">Cinta</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="696927326810689" type="dinoBroken" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="194015755010036" type="dinoBroken">
+                                    <param id="0" name="X">dinoBroken.X+cintaSpeed*60*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="598434868670340" title="Spawn Dino">
+            <sub-events>
+                <event-block sid="560390873730393">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="335840221135215" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="446738470854710">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="884313347034888" type="System">
+                                    <param id="0" name="Interval (seconds)">bombonFreqMin/cintaSpeed</param>
+                                </condition>
+                                <condition id="-13" name="Pick nth instance" sid="298096409706542" type="System">
+                                    <param id="0" name="Object">Spawn</param>
+                                    <param id="1" name="Instance">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="199537035140860">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="551653802261522" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="597015794228989" type="Function">
+                                            <param id="0" name="Name">&quot;createDino&quot;</param>
+                                            <param id="1" name="Parameter {n}">Spawn.X+42*cintaSpeed{###}Spawn.Y{###}&quot;DefaultAlternate&quot;{###}&quot;WrongAlternate&quot;{###}&quot;EmptyAlternate&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="552216588985487">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="806710453578849" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="153540523525136" type="Function">
+                                            <param id="0" name="Name">&quot;createDino&quot;</param>
+                                            <param id="1" name="Parameter {n}">Spawn.X+42*cintaSpeed{###}Spawn.Y{###}&quot;Default&quot;{###}&quot;Wrong&quot;{###}&quot;Empty&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="956950224523674">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="596678109886960" type="System">
+                                    <param id="0" name="Interval (seconds)">bombonFreqMin/cintaSpeed</param>
+                                </condition>
+                                <condition id="-13" name="Pick nth instance" sid="613977790648307" type="System">
+                                    <param id="0" name="Object">Spawn</param>
+                                    <param id="1" name="Instance">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="633961861269181" type="Function">
+                                    <param id="0" name="Name">&quot;createDino&quot;</param>
+                                    <param id="1" name="Parameter {n}">Spawn.X-42*cintaSpeed{###}Spawn.Y{###}&quot;Default&quot;{###}&quot;Wrong&quot;{###}&quot;Empty&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="869786865300971">
+                    <conditions>
+                        <condition id="0" name="On function" sid="418160280575413" type="Function">
+                            <param id="0" name="Name">&quot;createDino&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="181853432081560">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="226202250454217" type="System">
+                                    <param id="0" name="Variable">maquinaLoca</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Dino Excedente</comment>
+                                <event-block sid="340252199999564">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="511105428712080" type="System">
+                                            <param id="0" name="First value">random(0,1)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0.15</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="577093120120886" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="518642666848468">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="702258415064418" type="System">
+                                                    <param id="0" name="First value">random(0,1)</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">0.5</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="461819912726987" type="System">
+                                                    <param id="0" name="Variable">currentLevel</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>Si hay 4 o menos dinos en la mesa, spawnear un excedente</comment>
+                                                <event-block sid="724451315966616">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="973946505918036" type="System">
+                                                            <param id="0" name="Variable">dinoMesaCounter</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="652301211049740" type="System">
+                                                            <param id="0" name="Variable">dinoMesaCounter</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <comment>si hay dos o menos del tipo A, spawnear A</comment>
+                                                        <event-block sid="674236730777641">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="372723966591663" type="System">
+                                                                    <param id="0" name="Variable">dinoMesaCounterA</param>
+                                                                    <param id="1" name="Comparison">3</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="760667913550979" type="System">
+                                                                    <param id="0" name="Object to create">dinoDrag</param>
+                                                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                                                    <param id="2" name="X">Function.Param(0)-70*cintaSpeed</param>
+                                                                    <param id="3" name="Y">Function.Param(1)-22</param>
+                                                                </action>
+                                                                <action id="-10" name="Add to" sid="327511431016880" type="System">
+                                                                    <param id="0" name="Variable">dinoMesaCounterA</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <comment>si no, spawnear B</comment>
+                                                        <event-block sid="100528550992259">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="413330908050450" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="195488650630144" type="System">
+                                                                    <param id="0" name="Object to create">dinoDrag</param>
+                                                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                                                    <param id="2" name="X">Function.Param(0)-70*cintaSpeed</param>
+                                                                    <param id="3" name="Y">Function.Param(1)-22</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="331386862943664" type="dinoDrag">
+                                                                    <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="877448343585975">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="714888838888304" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="692672265913373" type="System">
+                                                    <param id="0" name="Variable">currentLevel</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="931256721314923">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="912544077832185" type="System">
+                                                            <param id="0" name="First value">random(0,1)</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">0.5</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="965821535458308" type="System">
+                                                            <param id="0" name="Object to create">bombon_reloj</param>
+                                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                                            <param id="2" name="X">Function.Param(0)-70*cintaSpeed</param>
+                                                            <param id="3" name="Y">Function.Param(1)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="184970999084727">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="161467967677261" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="225079968774728" type="System">
+                                                            <param id="0" name="Object to create">bombon_azul_brillo</param>
+                                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                                            <param id="2" name="X">Function.Param(0)-70*cintaSpeed</param>
+                                                            <param id="3" name="Y">Function.Param(1)</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="477728698465652" type="bombon_azul_brillo">
+                                                            <param id="0" name="Animation">&quot;Dino&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Dino Común</comment>
+                                <event-block sid="209666450442848">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="927674295410290" type="System">
+                                            <param id="0" name="First value">choose(0,1)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0.5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="997951980445003" type="System">
+                                            <param id="0" name="Object to create">dino</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Function.Param(0)</param>
+                                            <param id="3" name="Y">Function.Param(1)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="709202720498820" type="dino">
+                                            <param id="0" name="Animation">Function.Param(2)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="561845553665455" type="dino">
+                                            <param id="0" name="Angle">choose(0,90,180,270)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Wrong</comment>
+                                        <event-block sid="820451386977350">
+                                            <conditions>
+                                                <condition id="-13" name="Is between angles" sid="870135880167800" type="dino">
+                                                    <param id="0" name="First angle">10</param>
+                                                    <param id="1" name="Second angle">350</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="412583254239488" type="dino">
+                                                    <param id="0" name="Animation">Function.Param(3)</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Empty</comment>
+                                <event-block sid="201303646891660">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="705223203643092" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="848603465975789" type="System">
+                                            <param id="0" name="First value">random(0,1)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0.5</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="776644864377718" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="714804306006068" type="System">
+                                            <param id="0" name="Object to create">dino</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Function.Param(0)</param>
+                                            <param id="3" name="Y">Function.Param(1)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="707630753456646" type="dino">
+                                            <param id="0" name="Animation">Function.Param(4)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Broken</comment>
+                                <event-block sid="653862030456396">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="360844245469806" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="982413045752830" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="481313492582552" type="System">
+                                            <param id="0" name="Object to create">dinoBroken</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Function.Param(0)</param>
+                                            <param id="3" name="Y">Function.Param(1)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="364393566161739" type="dinoBroken">
+                                            <param id="0" name="Animation">Function.Param(2)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Dino Común (otra vez)</comment>
+                                <event-block sid="312200768107523">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="275535314930200" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="301855262428255" type="System">
+                                            <param id="0" name="Object to create">dino</param>
+                                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                            <param id="2" name="X">Function.Param(0)</param>
+                                            <param id="3" name="Y">Function.Param(1)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="307874263849068" type="dino">
+                                            <param id="0" name="Angle">choose(0,90,180,270)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="382495788736814" type="dino">
+                                            <param id="0" name="Animation">Function.Param(2)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Wrong</comment>
+                                        <event-block sid="636893545772491">
+                                            <conditions>
+                                                <condition id="-13" name="Is between angles" sid="145125739006624" type="dino">
+                                                    <param id="0" name="First angle">10</param>
+                                                    <param id="1" name="Second angle">350</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="102429613762353" type="dino">
+                                                    <param id="0" name="Animation">Function.Param(3)</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>DinoDrag Advertencia Mal Colocado</comment>
+                                <event-block sid="567459326482423">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="680782050913911" type="dinoDrag">
+                                            <param id="0" name="Object">Cinta</param>
+                                        </condition>
+                                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="315322854258566" type="dinoDrag" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="120906103277281">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="641389117312230" type="dinoDrag">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="767446293528523" type="dinoDrag">
+                                                    <param id="0" name="Animation">&quot;Wrong&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="859647399760827">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="291755732514302" type="dinoDrag">
+                                                    <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="182436590732706" type="dinoDrag">
+                                                    <param id="0" name="Animation">&quot;WrongAlternate&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="680967713368305">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="405943440284995" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="823344449806877" type="System">
+                                    <param id="0" name="Object to create">dinoBroken</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">Function.Param(0)</param>
+                                    <param id="3" name="Y">Function.Param(1)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="225076579456403" type="dinoBroken">
+                                    <param id="0" name="Animation">Function.Param(2)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="921338882609201" title="Drag Scale B">
+            <sub-events>
+                <event-block sid="479490197278677">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="494373894102226" type="dinoDrag" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="257789099081811" type="dinoDrag">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="652160762822065" type="dinoDrag" />
+                    </actions>
+                </event-block>
+                <event-block sid="549129265977197">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="694483706469455" type="dinoDrag" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="577997472149578" type="dinoDrag">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="802108514787870" title="Score Logic B">
+            <sub-events>
+                <comment>Gira Dino</comment>
+                <event-block any="1" sid="120682780825072">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="895156085971314" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="188519563964360" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="652544469306947" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="544349483586446">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="169218445751198" type="Touch">
+                                    <param id="0" name="Object">dino</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="336626032747393" type="dino">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="144149483312826" type="dino">
+                                    <param id="0" name="Animation">&quot;EmptyAlternate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="976667877880153" type="Audio">
+                                    <param id="0" name="Audio file">fast_swoosh</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">volumeSfx-3</param>
+                                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="191321810576738">
+                                    <conditions>
+                                        <condition behavior="LiteTween" id="1" name="Compare progress" sid="801524643107584" type="dino">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">0</param>
+                                        </condition>
+                                        <condition behavior="LiteTween" id="1" name="Compare progress" sid="429332291341479" type="dino">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="119460336190165" type="dino">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Destroy Dino al final de la cinta</comment>
+                <event-block sid="747178041247911">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="891022013191005" type="dino">
+                            <param id="0" name="Object">Destroy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="186983372496296" type="dino" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="352876650913137">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="397834289720671" type="dino">
+                                    <param id="0" name="First angle">-5</param>
+                                    <param id="1" name="Second angle">5</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="451714458814131" type="dino">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="700228665493752" type="dino">
+                                    <param id="0" name="Animation">&quot;EmptyAlternate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="791184035548488" type="Function">
+                                    <param id="0" name="Name">&quot;correct&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Create object" sid="938255747157108" type="System">
+                                    <param id="0" name="Object to create">bombon_azul_particle</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="X">dino.X</param>
+                                    <param id="3" name="Y">dino.Y</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="597835761934074" type="dino">
+                                    <param id="0" name="Object">coin_plain</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="415995472688549" type="Function">
+                                    <param id="0" name="Name">&quot;coin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Add to" sid="532393180545268" type="System">
+                                    <param id="0" name="Variable">entregadosCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="226599966309470">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="307467358316626" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="553330320031777" type="dino">
+                                    <param id="0" name="Object">x_red</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="566810621824893" type="x_red">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="134816780385161">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="596326624579007" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="375779140891135" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="658440016102511" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Dino Completar Espacios</comment>
+                <event-block sid="312159181729151">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="804190658915284" type="dinoDrag" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="612152478505711" type="dinoDrag">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="920501613491703">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="739552017213366" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="728890184778154" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="868003656313953" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Completar DinoA</comment>
+                        <event-block sid="278737422792901">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="181079427178070" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="492983964663335" type="dino">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="950190166000056" type="dinoDrag">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="302231666034285" type="dinoDrag">
+                                    <param id="0" name="Object">dino</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="539143140275962" type="dinoDrag" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="392243540513915" type="dinoDrag">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="LiteTweenDino" id="3" name="Set target" sid="638037990769460" type="dinoDrag">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">dino.X</param>
+                                </action>
+                                <action behavior="LiteTweenDino" id="3" name="Set target" sid="678232420378167" type="dinoDrag">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">dino.Y</param>
+                                </action>
+                                <action behavior="LiteTweenDino" id="10" name="Start" sid="537654982915175" type="dinoDrag">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="234892830312145" type="Audio">
+                                    <param id="0" name="Audio file">item</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">volumeSfx-3</param>
+                                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Completar DinoB</comment>
+                        <event-block sid="985350000040573">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="878464236406778" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="355337296142498" type="dino">
+                                    <param id="0" name="Animation">&quot;EmptyAlternate&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="934367267559073" type="dinoDrag">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="429855303343800" type="dinoDrag">
+                                    <param id="0" name="Object">dino</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="756947310698329" type="dinoDrag" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="370576279839174" type="dinoDrag">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="LiteTweenDino" id="3" name="Set target" sid="788933326226874" type="dinoDrag">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">dino.X</param>
+                                </action>
+                                <action behavior="LiteTweenDino" id="3" name="Set target" sid="593015363448255" type="dinoDrag">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">dino.Y</param>
+                                </action>
+                                <action behavior="LiteTweenDino" id="10" name="Start" sid="191833887317024" type="dinoDrag">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="959071178993873" type="Audio">
+                                    <param id="0" name="Audio file">item</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">volumeSfx-3</param>
+                                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="806385761190819">
+                    <conditions>
+                        <condition behavior="LiteTweenDino" id="4" name="On tween end" sid="934936997759162" type="dinoDrag" />
+                        <condition id="1" name="Is overlapping another object" sid="906251019080889" type="dinoDrag">
+                            <param id="0" name="Object">dino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="171872754602955" type="dinoDrag" />
+                        <action id="-11" name="Subtract from" sid="237240672373584" type="System">
+                            <param id="0" name="Variable">dinoMesaCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>DinoA</comment>
+                        <event-block sid="679412469860925">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="468923708962764" type="dino">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="559238204012285" type="dino">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="807580176495292" type="System">
+                                    <param id="0" name="Variable">dinoMesaCounterA</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>DinoB</comment>
+                        <event-block sid="962717232490419">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="213945113070842" type="System" />
+                                <condition id="2" name="Is playing" sid="239129164635313" type="dino">
+                                    <param id="0" name="Animation">&quot;EmptyAlternate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="397971246122201" type="dino">
+                                    <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Reponer Dino Mesa si hay menos de 4</comment>
+                        <event-block sid="669370502707438">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="284408695665689" type="System">
+                                    <param id="0" name="Variable">dinoMesaCounter</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>DinoA</comment>
+                                <event-block sid="157424233058853">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="725077774177083" type="System">
+                                            <param id="0" name="Variable">dinoMesaCounterA</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="504152619900746" type="Function">
+                                            <param id="0" name="Name">&quot;createDinoDrag&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Default&quot;{###}1{###}-130{###}-30</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>DinoB</comment>
+                                <event-block sid="714178127195859">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="222146723509173" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="638984936393939" type="Function">
+                                            <param id="0" name="Name">&quot;createDinoDrag&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;DefaultAlternate&quot;{###}0{###}30{###}130</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="202343490146894">
+                    <conditions>
+                        <condition id="0" name="On function" sid="271767650736200" type="Function">
+                            <param id="0" name="Name">&quot;createDinoDrag&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="964184246626406" type="System">
+                            <param id="0" name="Object to create">dinoDrag</param>
+                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                            <param id="2" name="X">random(mesaDinos.X+Function.Param(2),mesaDinos.X+Function.Param(3))</param>
+                            <param id="3" name="Y">590</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="557403525319942" type="System">
+                            <param id="0" name="Variable">dinoMesaCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="626611348517780" type="dinoDrag">
+                            <param id="0" name="Animation">Function.Param(0)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="547021196068193" type="System">
+                            <param id="0" name="Variable">dinoMesaCounterA</param>
+                            <param id="1" name="Value">int(Function.Param(1))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Destroy BrokenDino en Cajon</comment>
+                <event-block any="1" sid="285648363092447">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="210935160834203" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="607131519841475" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="297519379054933" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="288263903662176">
+                            <conditions>
+                                <condition behavior="DragDrop" id="1" name="On drag start" sid="244679386475247" type="dinoBroken" />
+                                <condition id="-7" name="Compare instance variable" sid="162497335672197" type="dinoBroken">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="838432735632748" type="dinoBroken">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;triggered&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="379083555118299" type="dinoBroken">
+                                    <param id="0" name="Object">dino</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="863259018936594">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="716083102765791" type="dinoBroken">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="789475230018786" type="dino">
+                                            <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="522815660653832">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="710440029726169" type="dinoBroken">
+                                            <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="683474336596917" type="dino">
+                                            <param id="0" name="Animation">&quot;EmptyAlternate&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="674311592275379">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="107153188958426" type="dinoBroken">
+                            <param id="0" name="Object">redContainer</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="552827625265267" type="dinoBroken" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="862436285171333" type="Function">
+                            <param id="0" name="Name">&quot;correct&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="426083533247641" type="dinoBroken">
+                            <param id="0" name="Object">coin_plain</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="151154418729148" type="dinoBroken">
+                            <param id="0" name="Object">bombon_azul_particle</param>
+                            <param id="1" name="Layer">&quot;bombones&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="741161567969162" type="Function">
+                            <param id="0" name="Name">&quot;coin&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="561311598971008" type="dinoBroken" />
+                        <action id="-10" name="Add to" sid="134639537065327" type="System">
+                            <param id="0" name="Variable">defectuosoCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Destroy DinoDrag fuera de la cinta</comment>
+                <event-block any="1" sid="174668772548785">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="849952348709854" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="963890430674746" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="213167554655381" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="306174689939475">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="307946113397295" type="BombonTodos">
+                                    <param id="0" name="Object">Out</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="490351687540404" type="BombonTodos">
+                                    <param id="0" name="Instance variable">isOverlappingOut</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="731144372406307" type="Touch">
+                                    <param id="0" name="Object">BombonTodos</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="385192512387722" type="System">
+                                    <param id="0" name="First value">BombonTodos.UID</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">bombon_azul_brillo.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="582549858255663" type="BombonTodos">
+                                    <param id="0" name="Instance variable">isOverlappingOut</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="759440163647663" type="BombonTodos">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="112375597538058" type="BombonTodos" />
+                                <action id="0" name="Spawn another object" sid="496106977150309" type="BombonTodos">
+                                    <param id="0" name="Object">x_red</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="683631622674882" type="x_red">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="985904755942778">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="388379918352761" type="dinoDrag">
+                                            <param id="0" name="Unique ID">BombonTodos.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="742506732590058" type="System">
+                                            <param id="0" name="Variable">dinoMesaCounter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="804070722266910">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="106316691772405" type="dinoDrag">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                </condition>
+                                                <condition id="2" name="Is playing" sid="167609798034160" type="dinoDrag">
+                                                    <param id="0" name="Animation">&quot;Wrong&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Subtract from" sid="469020801703347" type="System">
+                                                    <param id="0" name="Variable">dinoMesaCounterA</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="454143095134692">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="979644831671073" type="System">
+                                                    <param id="0" name="Variable">dinoMesaCounter</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="369937138732805">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="548632515980678" type="System">
+                                                            <param id="0" name="Variable">dinoMesaCounterA</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="100543005503586" type="Function">
+                                                            <param id="0" name="Name">&quot;createDinoDrag&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Default&quot;{###}1{###}-130{###}-30</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="193790992113167">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="390295135633395" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="421650016239706" type="Function">
+                                                            <param id="0" name="Name">&quot;createDinoDrag&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;DefaultAlternate&quot;{###}0{###}30{###}130</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>!= &quot;stopped&quot; permite cometer errores durante emergency stop, para prescindir de esta función habría que detener el contador del emegency stop en game over</comment>
+                                <event-block sid="142446002406226">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="385725113237417" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="994561292878177" type="System">
+                                            <param id="0" name="Variable">levelState</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="321618447150036" type="Function">
+                                            <param id="0" name="Name">&quot;error&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="891583955883046">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="214990991909698" type="bombon_azul_brillo">
+                            <param id="0" name="Object">Out</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="759869470929575" type="bombon_azul_brillo" />
+                    </actions>
+                </event-block>
+                <event-block sid="838014644236228">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="107812596356161" type="bombon_reloj">
+                            <param id="0" name="Object">Out</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="134573526885772" type="bombon_reloj" />
+                    </actions>
+                </event-block>
+                <comment>Bombón Premiado</comment>
+                <event-block sid="792473558577564">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="737246016164884" type="Touch">
+                            <param id="0" name="Object">bombon_azul_brillo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="322129459707168" type="System">
+                            <param id="0" name="Variable">bombonBrilloX</param>
+                            <param id="1" name="Value">bombon_azul_brillo.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="284302704325794" type="System">
+                            <param id="0" name="Variable">bombonBrilloY</param>
+                            <param id="1" name="Value">bombon_azul_brillo.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="207329115995680" type="bombon_azul_brillo" />
+                        <action id="0" name="Call function" sid="108439790571067" type="Function">
+                            <param id="0" name="Name">&quot;bombonPremiado&quot;</param>
+                            <param id="1" name="Parameter {n}">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="803006917457600" title="Marks B">
+            <sub-events>
+                <comment>flecha visibilidad onDrag</comment>
+                <event-block any="1" sid="505740291975067">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="796029377011780" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="655484467881271" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="490682650310570" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="117663967279687">
+                            <conditions>
+                                <condition behavior="DragDrop" id="1" name="On drag start" sid="766818645407685" type="dinoBroken" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="679842381534742" type="mark_arrow">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="410763916073040">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="533932105154791" type="dinoBroken" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="176160268470954" type="mark_arrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>create flechas en cada dino empty</comment>
+                <event-block any="1" sid="440092805085531">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="623673537325383" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="583659691102487" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="208811207593951" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="349550644617905">
+                            <conditions>
+                                <condition behavior="DragDrop" id="1" name="On drag start" sid="364687101978440" type="dinoDrag" />
+                                <condition id="2" name="Is playing" sid="245951001287713" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="271706332905476" type="System">
+                                    <param id="0" name="Object">dino</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="354501442209457" type="dino">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="198681963386975" type="System">
+                                    <param id="0" name="Object to create">mark_arrow</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">dino.X</param>
+                                    <param id="3" name="Y">dino.Y-25</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="987377444542599" type="mark_arrow">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="208668836084720" type="mark_arrow">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="378808793570973" type="mark_arrow">
+                                    <param id="0" name="Instance variable">cajon</param>
+                                    <param id="1" name="Value">str(dino.UID)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="419779882851287">
+                            <conditions>
+                                <condition behavior="DragDrop" id="1" name="On drag start" sid="697910876036431" type="dinoDrag" />
+                                <condition id="2" name="Is playing" sid="813367852515552" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="871342414834768" type="System">
+                                    <param id="0" name="Object">dino</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="570809627125861" type="dino">
+                                    <param id="0" name="Animation">&quot;EmptyAlternate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="409630655042849" type="System">
+                                    <param id="0" name="Object to create">mark_arrow</param>
+                                    <param id="1" name="Layer">&quot;bombones&quot;</param>
+                                    <param id="2" name="X">dino.X</param>
+                                    <param id="3" name="Y">dino.Y-25</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="474492625974771" type="mark_arrow">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="243748946113001" type="mark_arrow">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="903702122666018" type="mark_arrow">
+                                    <param id="0" name="Instance variable">cajon</param>
+                                    <param id="1" name="Value">str(dino.UID)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Mover flechas junto a sus dinos</comment>
+                <event-block any="1" sid="385386423324415">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="264089112221034" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="252219661971413" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;stopped&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="647614584358572" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pre-started&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="511684228051326">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="166609605840304" type="System">
+                                    <param id="0" name="Object">mark_arrow</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="768094795818881" type="mark_arrow">
+                                    <param id="0" name="Instance variable">cajon</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;broken&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="193593517068370" type="dino">
+                                    <param id="0" name="Unique ID">int(mark_arrow.cajon)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="534813583530007" type="mark_arrow">
+                                    <param id="0" name="X">dino.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>destroy flechas onDrop</comment>
+                <event-block sid="490474981217354">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="157581160555344" type="dinoDrag" />
+                        <condition id="-11" name="For Each" sid="685569603341028" type="System">
+                            <param id="0" name="Object">mark_arrow</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="321060421304692" type="mark_arrow">
+                            <param id="0" name="Instance variable">cajon</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;broken&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="262171389555938" type="mark_arrow" />
+                    </actions>
+                </event-block>
+                <comment>dinoDrag quitar animacion Advertencia &quot;mal ubicado&quot; al comenzar Drag</comment>
+                <event-block sid="854330912887101">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="277910893484498" type="dinoDrag" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="755046803088254">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="547455229005003" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;Wrong&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="188189070190710" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="354116903126147">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="126063414981631" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;WrongAlternate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="865447749989597" type="dinoDrag">
+                                    <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Flechas indicativas para Girar Dinos cuando no estan orientados correctamente</comment>
+                <event-block sid="973324341533669">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="797808987211809" type="dino" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="801324826012342">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="378416182270722" type="dino">
+                                    <param id="0" name="First angle">10</param>
+                                    <param id="1" name="Second angle">350</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="290182675774376">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="271216947767542" type="dino">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="761492954790665" type="dino">
+                                            <param id="0" name="Animation">&quot;Wrong&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="364715478414922">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="533227642401769" type="dino">
+                                            <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="625900377977893" type="dino">
+                                            <param id="0" name="Animation">&quot;WrongAlternate&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="959685141521038">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="290756834037206" type="dino">
+                                    <param id="0" name="First angle">-9</param>
+                                    <param id="1" name="Second angle">9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="395230069766198">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="446290603120846" type="dino">
+                                            <param id="0" name="Animation">&quot;Wrong&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="734724750385588" type="dino">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="866794954781722">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="706938006459407" type="dino">
+                                            <param id="0" name="Animation">&quot;WrongAlternate&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="113725339427155" type="dino">
+                                            <param id="0" name="Animation">&quot;DefaultAlternate&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="660847455803355" title="Ráfaga">
+            <sub-events>
+                <event-block sid="907202148517424">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="823763659136752" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="532843365079124" type="System">
+                            <param id="0" name="Variable">levelState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;started&quot;</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="155804006688601" type="System">
+                            <param id="0" name="Interval (seconds)">random(20,35)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="531380292155640" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">77</param>
+                            <param id="3" name="Y">300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="534085514846513">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="387580506646590" type="Sprite" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="391211680149908" type="Sprite">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">random(5,7.5)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="516341675230482" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">bombonFreqMin*0.7</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="306118416879585" type="System">
+                            <param id="0" name="Variable">maquinaLoca</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="220416948707432" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="624336837373542" type="Audio">
+                            <param id="0" name="Audio file">488037__bendrain__tools_clank_03</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">volumeSfx-6</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="825330764470179" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="141769685758955" type="Audio">
+                            <param id="0" name="Audio file">488037__bendrain__tools_clank_03</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">volumeSfx-3</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="696239886778301" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="454873243157361" type="Audio">
+                            <param id="0" name="Audio file">488037__bendrain__tools_clank_03</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">volumeSfx-3</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="483906393324303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="446916510115592" type="Audio">
+                            <param id="0" name="Audio file">488037__bendrain__tools_clank_03</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">volumeSfx-6</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671199712382007">
+                    <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="844820669671056" type="Sprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="162900423608383" type="Sprite" />
+                        <action id="-9" name="Set value" sid="791973281049487" type="System">
+                            <param id="0" name="Variable">maquinaLoca</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="160206314835996" type="System">
+                            <param id="0" name="Variable">bombonFreqMin</param>
+                            <param id="1" name="Value">bombonFreqMin/0.7</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

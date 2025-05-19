@@ -10,8 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Title</layout>
-        <event-sheet order="0">Title</event-sheet>
+        <layout active="1" order="0">Title</layout>
+        <layout order="2">LevelC</layout>
+        <layout order="4">LevelC2</layout>
+        <event-sheet order="1">_Title</event-sheet>
+        <event-sheet order="3">_LevelC</event-sheet>
+        <event-sheet order="5">_LevelC2</event-sheet>
+        <event-sheet order="6">_Level_Shared</event-sheet>
+        <event-sheet order="7">_Supervisora</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -19,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="BombonNormal" />
         <family expanded="0" name="ButtonsHover" />
         <family expanded="0" name="BombonDefectuoso" />
@@ -33,9 +39,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/UI/" />
-        <folder expanded="0" path="object-folder/Level_scenario/" />
+        <folder expanded="0" path="object-folder/Level_scenery/" />
         <folder expanded="0" path="object-folder/Level_hitboxes/" />
-        <folder expanded="1" path="object-folder/Bombones/" />
+        <folder expanded="0" path="object-folder/Bombones/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
@@ -62,9 +68,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/mark_arrow/" />
         <folder expanded="1" path="animation-folder/music_icon/" />
         <folder expanded="1" path="animation-folder/sfx_icon/" />
-        <folder expanded="1" path="animation-folder/button_bg2/" />
         <folder expanded="1" path="animation-folder/play/" />
         <folder expanded="1" path="animation-folder/pause/" />
+        <folder expanded="1" path="animation-folder/extralife/" />
+        <folder expanded="1" path="animation-folder/choco_square/" />
+        <folder expanded="1" path="animation-folder/notepad/" />
         <folder expanded="1" path="animation-folder/level_background/" />
         <folder expanded="1" path="animation-folder/cinta_engranaje/" />
         <folder expanded="1" path="animation-folder/cinta_L/" />
@@ -80,7 +88,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/redContainer/" />
         <folder expanded="1" path="animation-folder/blueContainer/" />
         <folder expanded="1" path="animation-folder/cinta3/" />
-        <folder expanded="1" path="animation-folder/linea2_isometric/" />
+        <folder expanded="1" path="animation-folder/isometric_lineaB/" />
         <folder expanded="1" path="animation-folder/Recurso/" />
         <folder expanded="1" path="animation-folder/Recurso4/" />
         <folder expanded="1" path="animation-folder/Recurso3/" />
@@ -88,7 +96,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/recorrido/" />
         <folder expanded="1" path="animation-folder/Recurso2/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/isometric_lineaA/" />
         <folder expanded="1" path="animation-folder/shadow/" />
         <folder expanded="1" path="animation-folder/recorrido2/" />
         <folder expanded="1" path="animation-folder/cajasenpallet/" />
@@ -100,6 +108,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Trophy/" />
         <folder expanded="1" path="animation-folder/circle_white_blur/" />
         <folder expanded="1" path="animation-folder/Supervisora/" />
+        <folder expanded="1" path="animation-folder/circle_machine/" />
+        <folder expanded="1" path="animation-folder/dot/" />
+        <folder expanded="1" path="animation-folder/isometric_lineaC/" />
+        <folder expanded="1" path="animation-folder/levelC_cintaDetalle/" />
+        <folder expanded="1" path="animation-folder/levelC_cintaDetalle2/" />
+        <folder expanded="1" path="animation-folder/levelC_cintaDetalle3/" />
+        <folder expanded="1" path="animation-folder/levelC_cintaDetalle4/" />
         <folder expanded="1" path="animation-folder/BlueMark/" />
         <folder expanded="1" path="animation-folder/BlueTarget/" />
         <folder expanded="1" path="animation-folder/Destroy/" />
@@ -115,6 +130,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/RedTarget/" />
         <folder expanded="1" path="animation-folder/YellowTarget/" />
         <folder expanded="1" path="animation-folder/redScreen2/" />
+        <folder expanded="1" path="animation-folder/hitbox_snap_conejo/" />
+        <folder expanded="1" path="animation-folder/Destroy2/" />
+        <folder expanded="1" path="animation-folder/hitbox_conejo_envolver/" />
         <folder expanded="1" path="animation-folder/bombon_amarillo/" />
         <folder expanded="1" path="animation-folder/bombon_amarillo_defectuoso/" />
         <folder expanded="1" path="animation-folder/bombon_azul/" />
@@ -139,8 +157,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/dino/" />
         <folder expanded="1" path="animation-folder/dinoBroken/" />
         <folder expanded="1" path="animation-folder/dinoDrag/" />
-        <folder expanded="1" path="animation-folder/notepad/" />
-        <folder expanded="1" path="animation-folder/choco_square/" />
-        <folder expanded="1" path="animation-folder/extralife/" />
+        <folder expanded="1" path="animation-folder/Conejo/" />
+        <folder expanded="1" path="animation-folder/cintita/" />
+        <folder expanded="1" path="animation-folder/caja_conejos/" />
+        <folder expanded="1" path="animation-folder/papel/" />
+        <folder expanded="1" path="animation-folder/porta_papel_/" />
+        <folder expanded="1" path="animation-folder/porta_papel_2/" />
+        <folder expanded="1" path="animation-folder/entrada_conejo/" />
+        <folder expanded="1" path="animation-folder/caja_conejos_6_llena/" />
     </folders-expanded>
 </c2uistate>
